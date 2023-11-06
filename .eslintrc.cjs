@@ -32,5 +32,6 @@ module.exports = {
       { avoidEscape: false, allowTemplateLiterals: true },
     ],
     'react/react-in-jsx-scope': 'off',
+    'react/no-unescaped-entities': 0,
   },
 };

@@ -10,6 +10,7 @@ const CreatePasswordSuccess = lazy(
 );
 const Signup = lazy(() => import('../Signup'));
 const Home = lazy(() => import('../Home'));
+const PageNotFound = lazy(() => import('../PageNotFound'));
 
 const AuthRouter = () => {
   return (
@@ -28,6 +29,7 @@ const AuthRouter = () => {
         />
         <Route path={AuthPaths.FORGOT_PASSWORD} element={<ForgotPassword />} />
         <Route path={AuthPaths.SIGNUP} element={<Signup />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
   );
