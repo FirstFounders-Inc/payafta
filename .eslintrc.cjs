@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -32,5 +33,6 @@ module.exports = {
       { avoidEscape: false, allowTemplateLiterals: true },
     ],
     'react/react-in-jsx-scope': 'off',
+    'react/no-unescaped-entities': 0,
   },
 };
