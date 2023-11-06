@@ -3,7 +3,7 @@ export const BasePaths = {
 };
 
 export const AuthPaths = {
-  HOME: '/',
+  HOME: 'home',
   SIGNIN: 'signin',
   FORGOT_PASSWORD: 'forgot-password',
   CREATE_NEW_PASSWORD: 'create-new-password',

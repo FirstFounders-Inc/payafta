@@ -16,7 +16,7 @@ const AuthRouter = () => {
   return (
     <Routes>
       <Route path="/">
-        <Route path="" element={<Navigate to="/" replace />} />
+        <Route path="" element={<Navigate to="/home" replace />} />
         <Route path={AuthPaths.HOME} element={<Home />} />
         <Route path={AuthPaths.SIGNIN} element={<Login />} />
         <Route
