@@ -1,5 +1,3 @@
-
-
 const Adminroute = () => {
   return <div>Adminroute</div>;
 };
