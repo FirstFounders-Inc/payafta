@@ -1,7 +1,8 @@
 // import HowItWorks from './components/HowItWorks';
 // import BuyerProtection from './components/BuyerProtection';
 import Navbar from './components/Navbar';
-import SellerProtection from './components/SellerProtection';
+import WhatCanYouBuy from './components/WhatCanYouBuy';
+ import SellerProtection from './components/SellerProtection';
 // import SafePayment from './components/SafePayment';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       {/* <HowItWorks /> */}
       {/* <BuyerProtection /> */}
       <SellerProtection />
+      <WhatCanYouBuy />
     </div>
   );
 };
