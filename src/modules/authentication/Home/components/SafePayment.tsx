@@ -14,7 +14,7 @@ const safePaymentObj = [
 const SafePayment = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-2  pt-[38px] md:pt-[66px] pb-[30px] lg:pb-[54px] ">
-      <div className="md:flex-1">
+      <div className="lg:flex-1">
         {safePaymentObj?.map((el, idx) => {
           return (
             <div key={idx} className="">
