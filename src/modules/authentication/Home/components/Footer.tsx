@@ -1,8 +1,8 @@
-import logo from '@assets/svg/Logo.svg'
-import facebook from '@assets/svg/facebook.svg'
-import twitter from '@assets/svg/twitter.svg'
-import linkedin from '@assets/svg/linkedin.svg'
-import instagram from '@assets/svg/instagram.svg'
+import logo from '@assets/svg/Logo.svg';
+import facebook from '@assets/svg/facebook.svg';
+import twitter from '@assets/svg/twitter.svg';
+import linkedin from '@assets/svg/linkedin.svg';
+import instagram from '@assets/svg/instagram.svg';
 
 const Footer = () => {
   return (
@@ -37,9 +37,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className='pt-10 pb-10 text-center text-[16px leading-5]'>Copyright © 2023 PayAfta</p>
+      <p className="pt-10 pb-10 text-center text-[16px leading-5]">
+        Copyright © 2023 PayAfta
+      </p>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
