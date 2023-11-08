@@ -1,4 +1,4 @@
-import { physicalProducts, services } from 'db/WhatCanYouBuy';
+import { physicalProducts, services } from 'db/home';
 import check from '@assets/icons/check.svg';
 
 const WhatCanYouBuy = () => {

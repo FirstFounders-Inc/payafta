@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import WhatCanYouBuy from './components/WhatCanYouBuy';
 import SellerProtection from './components/SellerProtection';
 import SafePayment from './components/SafePayment';
+import SetUpEscrow from './components/SetUpEscrow';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <BuyerProtection />
       <SellerProtection />
       <WhatCanYouBuy />
+      <SetUpEscrow />
     </div>
   );
 };
