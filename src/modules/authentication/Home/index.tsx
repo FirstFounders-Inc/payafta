@@ -5,6 +5,7 @@ import WhatCanYouBuy from './components/WhatCanYouBuy';
 import SellerProtection from './components/SellerProtection';
 import SafePayment from './components/SafePayment';
 import SetUpEscrow from './components/SetUpEscrow';
+import Faq from './components/Faq';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <SellerProtection />
       <WhatCanYouBuy />
       <SetUpEscrow />
+      <Faq />
     </div>
   );
 };
