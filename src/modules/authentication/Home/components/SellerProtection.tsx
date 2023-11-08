@@ -2,9 +2,9 @@ import sellerProtection from '@assets/svg/SellerProtection.svg';
 
 const SellerProtection = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
+    <div className="flex flex-col lg:flex-row gap-2 items-center justify-center pt-16">
       <div className="flex-1">
-        <h1 className=" lg:w-[624px] text-[64px] leading-[80px] text-[#03045B] font-normal">
+        <h1 className=" lg:w-[624px] text-[64px] leading-[80px] text-[#03045B] font-normal font-[Millik]">
           Seller Protection with Payafta
         </h1>
         <p className="lg:w-[624px] text-[20px] leading-[25px] font-medium text-[#333333] pt-4">
@@ -15,7 +15,7 @@ const SellerProtection = () => {
           as smooth and secure as possible.
         </p>
       </div>
-      <div className=' pt-10'>
+      <div className=" pt-10">
         <img src={sellerProtection} alt=" a happy man" />
       </div>
     </div>

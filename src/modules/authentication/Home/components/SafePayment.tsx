@@ -21,7 +21,7 @@ const SafePayment = () => {
               <p className=" rounded-[16px] md:rounded-[24px] bg-[#86C8E9] p-2 w-[272px] text-[#fff] uppercase  text-[14px] font-600">
                 {el?.smallText}
               </p>
-              <h1 className=" text-[52px] lg:text-[80px] font-normal text-[#03045B] w-[351px]  md:w-[700px] lg:w-[539px]  leading-[65px] md:leading-[100px] uppercase mb-[10px]">
+              <h1 className=" font-[Millik] text-[52px] lg:text-[80px] font-normal text-[#03045B] w-[351px]  md:w-[700px] lg:w-[539px]  leading-[65px] md:leading-[100px] uppercase mb-[10px]">
                 {el?.bigText}
               </h1>
               <p className="text-[#333333] text-[16px] md:text-[20px] leading-[20px] md:leading-[25px] font-medium w-[350px] md:w-[649px] mb-[24px]">
