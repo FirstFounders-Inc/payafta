@@ -4,7 +4,7 @@ const SellerProtection = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-2 items-center justify-center pt-16">
       <div className="flex-1">
-        <h1 className=" lg:w-[624px] text-[64px] leading-[80px] text-[#03045B] font-bold font-[Millik]">
+        <h1 className=" lg:w-[624px] text-[64px] leading-[80px] text-[#03045B] font-bold font-[Playfair]">
           Seller Protection with Payafta
         </h1>
         <p className="lg:w-[624px] text-[20px] leading-[25px] font-medium text-[#333333] pt-4">

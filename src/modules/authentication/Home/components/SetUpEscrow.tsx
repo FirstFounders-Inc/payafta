@@ -6,7 +6,7 @@ const SetUpEscrow = () => {
   return (
     <div className="bg-[#E9F5FB] lg:h-[639px] border rounded-[24px] flex  flex-col lg:flex-row gap-4 px-[40px] pt-[40px] mt-14">
       <div className="lg:w-[729px]">
-        <h1 className="text-[64px] leading-[80px] text-[#03045B] font-[Millik] pb-6 font-bold">
+        <h1 className="text-[64px] leading-[80px] text-[#03045B] font-[Playfair] pb-6 font-bold">
           Set Up Escrow Payments with Payafta
         </h1>
         <div>

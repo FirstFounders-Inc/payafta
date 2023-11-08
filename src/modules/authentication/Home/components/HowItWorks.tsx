@@ -36,7 +36,7 @@ const HowItWorks = () => {
   return (
     <div className=" pt-[40px] md:pt-[86px] ">
       <div className="flex flex-col items-center justify-center">
-        <h1 className=" font-bold  text-[52px] md:text-[64px]  leading-[65px] md:leading-[80px] text-[#03045B] font-[Millik]">
+        <h1 className=" font-bold  text-[52px] md:text-[64px]  leading-[65px] md:leading-[80px] text-[#03045B] font-[Playfair]">
           How it works
         </h1>
         <p className=" text-[16px] lg:text-[20px] text-center font-medium   lg:w-[838px]  leading-[20px] lg:leading-[25px] text-[#666666]">

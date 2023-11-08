@@ -10,7 +10,7 @@ const Faq = () => {
   }
   return (
     <div className="pt-24 ">
-      <h1 className="text-[#03045B] text-[64px] font-[Millik] font-bold">
+      <h1 className="text-[#03045B] text-[64px] font-[Playfair] font-bold">
         FAQ
       </h1>
       <div className="flex flex-col lg:flex-row gap-4">
