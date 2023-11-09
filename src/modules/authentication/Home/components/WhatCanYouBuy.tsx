@@ -4,7 +4,7 @@ import check from '@assets/icons/check.svg';
 const WhatCanYouBuy = () => {
   return (
     <div className="flex flex-col items-center justify-center pt-16">
-      <h1 className="lg:w-[920px] text-center  text-[52px] lg:text-[64px]  leading-[65px] lg:leading-[80px] text-[#03045B] font-bold font-[Millik]">
+      <h1 className="lg:w-[1248px] text-center  text-[48px] lg:text-[64px]  leading-[65px] lg:leading-[80px] text-[#03045B] font-bold font-[Playfair]">
         What Can You Buy & Sell Using PayAfta?
       </h1>
       <div className="flex flex-col md:flex-row gap-10 lg:gap-24 pt-6">
