@@ -36,7 +36,7 @@ const SafePayment = () => {
         })}
       </div>
       <div className="mt-16 lg:mt-0">
-        <Desktop className='w-full' />
+        <Desktop className="w-full" />
       </div>
     </div>
   );
