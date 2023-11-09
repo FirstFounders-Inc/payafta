@@ -1,7 +1,6 @@
-import { Controller, FieldValues } from 'react-hook-form'
-import { IControlledInputProps } from './interface'
-import Input from '.'
-
+import { Controller, FieldValues } from 'react-hook-form';
+import { IControlledInputProps } from './interface';
+import Input from '.';
 
 const ControlledInput = <TFieldValue extends FieldValues>(
   props: IControlledInputProps<TFieldValue>,
@@ -23,4 +22,4 @@ const ControlledInput = <TFieldValue extends FieldValues>(
   );
 };
 
-export default ControlledInput
+export default ControlledInput;

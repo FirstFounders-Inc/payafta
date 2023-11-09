@@ -7,7 +7,7 @@ type IInputAdornmentProps = Omit<InputAdornmentProps, 'position'>;
 
 interface IBaseControlledField<TFieldValues extends FieldValues> {
   name: Path<TFieldValues>;
-  control: Control<TFieldValues>;
+  control?: Control<TFieldValues>;
   errors?: Partial<FieldErrorsImpl<TFieldValues>>;
 }
 
@@ -19,9 +19,11 @@ export type IInputProps = Omit<OutlinedInputProps, 'type'> &
     endAdornmentProps?: IInputAdornmentProps;
   };
 
-
-  export type IControlledInputProps <TFieldValues extends FieldValues>= Omit<IInputProps, 'value' | 'name'> &
-    IBaseControlledField<TFieldValues> & {
-      name: string;
-      type?: 'text' | 'number' | 'password' | 'email';
-    };
+export type IControlledInputProps<TFieldValues extends FieldValues> = Omit<
+  IInputProps,
+  'value' | 'name'
+> &
+  IBaseControlledField<TFieldValues> & {
+    name: string;
+    type?: 'text' | 'number' | 'password' | 'email';
+  };

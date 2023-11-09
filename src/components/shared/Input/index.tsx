@@ -17,11 +17,16 @@ const Input = (props: IInputProps) => {
     ...rest
   } = props;
   return (
-    <div className="w-full max-w-full overflow-hidden">
-      {label && <label>{label}</label>}
+    <div className="w-full max-w-full overflow-hidden flex flex-col p-2">
+      {label && <label className="pb-[3px]">{label}</label>}
       <OutlinedInput
         {...rest}
-        classes={{ input: twMerge('w-full !text-[12px]', className) }}
+        classes={{
+          input: twMerge(
+            'w-full !text-[12px] rounded-[8px] boder border-[#E6E6E6]',
+            className,
+          ),
+        }}
         startAdornment={
           startAdornment ? (
             <InputAdornment {...startAdornmentProps} position="start">

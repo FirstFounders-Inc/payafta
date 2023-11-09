@@ -1,4 +1,4 @@
 export type IFieldHelperTextProps = {
-    helperText?: React.ReactNode;
-    error?: boolean
-}
+  helperText?: React.ReactNode;
+  error?: boolean;
+};
