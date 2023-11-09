@@ -7,7 +7,7 @@ const BuyerProtection = () => {
         <img src={buyerProtection} alt="a happy lady" />
       </div>
       <div className="">
-        <h1 className="lg:w-[624px]  font-bold  text-[52px] lg:text-[64px]   text-[#03045B] font-[Millik]">
+        <h1 className="lg:w-[524px]  font-bold lg:leading-[89px] text-[48px] lg:text-[64px]   text-[#03045B] font-[Millik]">
           Buyer Protection with Payafta
         </h1>
         <p className="text-[20px] leading-[25px] text-[#333333] font-medium lg:w-[624px] pt-4">

@@ -1,5 +1,5 @@
 import rightAccordion from '@assets/icons/rightAccordion.svg';
-import  Desktop  from '@assets/svg/desktop.svg?react';
+import Desktop from '@assets/svg/desktop.svg?react';
 
 const safePaymentObj = [
   {
@@ -21,7 +21,7 @@ const SafePayment = () => {
               <p className=" rounded-[16px] md:rounded-[24px] bg-[#86C8E9] p-2 w-[272px] text-[#fff] uppercase  text-[14px] font-600">
                 {el?.smallText}
               </p>
-              <h1 className=" font-[Playfair] text-[52px] lg:text-[80px] font-bold text-[#03045B]   md:w-[700px] lg:w-[539px]  leading-[65px] md:leading-[100px] uppercase mb-[10px]">
+              <h1 className=" font-[Playfair] text-[48px] lg:text-[80px] font-bold text-[#03045B]   md:w-[700px] lg:w-[539px]  leading-[65px] md:leading-[100px] uppercase mb-[10px]">
                 {el?.bigText}
               </h1>
               <p className="text-[#333333] text-[16px] md:text-[20px] leading-[20px] md:leading-[25px] font-medium  md:w-[649px] mb-[24px]">
@@ -36,7 +36,7 @@ const SafePayment = () => {
         })}
       </div>
       <div className="mt-16 lg:mt-0">
-        <Desktop />
+        <Desktop className='w-full' />
       </div>
     </div>
   );
