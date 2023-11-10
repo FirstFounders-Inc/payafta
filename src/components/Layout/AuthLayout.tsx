@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Logo from '@assets/svg/Logo.svg?react';
-import Button from '@components/shared/Button';
+
 import { Link, To } from 'react-router-dom';
 import { Checkbox } from '@mui/material';
 import { twMerge } from 'tailwind-merge';
@@ -10,7 +10,7 @@ type Props = {
   bigText: string;
   smallText: string;
   smallParagraph?: string;
-  buttonText: string;
+
   linkTo: To;
   linkText?: string;
   checkboxText?: string;
@@ -21,7 +21,7 @@ type Props = {
 
 const AuthLayout = ({
   children,
-  buttonText,
+
   bigText,
   smallText,
   linkTo,
@@ -54,16 +54,16 @@ const AuthLayout = ({
         </div>
       )}
 
-      <Button className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8">
-        {buttonText}
-      </Button>
       {smallText && linkTo && linkText && (
         <div className={twMerge('flex pt-6 ', className)}>
           <p className="text-[14px] font-normal leading-4 text-[#666666] pt-[5px]">
             {smallText}
           </p>
 
-          <Link to={linkTo} className="pl-2  pt-[5px] text-[12px] font-semibold">
+          <Link
+            to={linkTo}
+            className="pl-2  pt-[5px] text-[12px] font-semibold"
+          >
             {linkText}
           </Link>
         </div>
