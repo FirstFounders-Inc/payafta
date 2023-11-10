@@ -7,7 +7,7 @@ const Navbar = () => {
         <img src={Logo} alt="company logo" />
       </div>
       <div className="flex gap-6">
-        <Link to='/signin'>
+        <Link to="/signin">
           <button className="border-[2px] border-[#333333] rounded-[48px] px-[18px] flex items-center py-2">
             Login
           </button>

@@ -23,7 +23,7 @@ const Input = (props: IInputProps) => {
         {...rest}
         classes={{
           input: twMerge(
-            'w-full !text-[12px] rounded-[8px] boder border-[#E6E6E6]',
+            'w-full !text-[12px] rounded-[8px] border border-[#E6E6E6]',
             className,
           ),
         }}
