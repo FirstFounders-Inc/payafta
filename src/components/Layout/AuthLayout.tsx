@@ -32,7 +32,7 @@ const AuthLayout = ({
   smallParagraph,
 }: Props) => {
   return (
-    <section className="  lg:p-20 flex flex-col ">
+    <section className="  w-full py-8  px-2 lg:px-14 flex flex-col ">
       <div>
         <Logo />
         <h3 className="pt-14 font-bold text-[24px] leading-7 text-[#1A1A1A]">

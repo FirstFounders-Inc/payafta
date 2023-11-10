@@ -12,7 +12,7 @@ import EyeOpen from '@assets/icons/eyeOpen.svg?react';
 import { useState } from 'react';
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
   const { control, handleSubmit } = useForm({
     defaultValues: {
       email: '',
@@ -23,18 +23,18 @@ const Login = () => {
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
-  }
+  };
 
   function handle(data: ILoginInput) {
     console.log(data);
   }
   return (
-    <main className="lg:flex lg:min-h-screen  ">
-      <article className="flex justify-center rounded-lg bg-white ">
-        <section className="hidden lg:relative lg:flex  h-full lg:flex-[60%] flex-col justify-between ">
+    <div className="w-full ">
+      <div className="flex flex-col lg:flex-row w-full justify-center">
+        <section className="hidden lg:flex lg:flex-[60%] ">
           <Signin />
         </section>
-        <section className="flex lg:flex-[40%] flex-col items-center justify-between  px-4 py-4  ">
+        <section className="  flex  flex-col lg:flex-[40%]   px-4 ">
           <AuthLayout
             bigText="Sign in"
             smallParagraph="Enter your account details"
@@ -87,8 +87,8 @@ const Login = () => {
           </AuthLayout>
           {/* <div className="grid h-full place-content-center"></div> */}
         </section>
-      </article>
-    </main>
+      </div>
+    </div>
   );
 };
 
