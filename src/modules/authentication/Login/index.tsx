@@ -8,8 +8,11 @@ import { Link } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { loginSchema } from '../validation/authValidation';
 import { ILoginInput } from '@interfaces/auth.interface';
+import EyeOpen from '@assets/icons/eyeOpen.svg?react';
+import { useState } from 'react';
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false)
   const { control, handleSubmit } = useForm({
     defaultValues: {
       email: '',
@@ -17,6 +20,10 @@ const Login = () => {
     },
     resolver: yupResolver(loginSchema),
   });
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  }
 
   function handle(data: ILoginInput) {
     console.log(data);
@@ -36,7 +43,7 @@ const Login = () => {
             linkTo="/signup"
             className="lg:justify-center lg:items-center"
           >
-            <form onSubmit={handleSubmit(handle, (err) => console.log(err))}>
+            <form onSubmit={handleSubmit(handle, err => console.log(err))}>
               <ControlledInput
                 label="Email"
                 type="email"
@@ -45,10 +52,16 @@ const Login = () => {
               />
               <ControlledInput
                 label="Password"
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 name="password"
                 control={control}
-                endAdornment={<EyeClosed />}
+                endAdornment={
+                  showPassword ? (
+                    <EyeOpen onClick={handleShowPassword} />
+                  ) : (
+                    <EyeClosed onClick={handleShowPassword} />
+                  )
+                }
               />
               <div className="flex justify-between items-center">
                 <div className="flex ">
@@ -64,7 +77,10 @@ const Login = () => {
                   Recover password?
                 </Link>
               </div>
-              <Button className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8 w-full" type='submit'>
+              <Button
+                className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8 w-full"
+                type="submit"
+              >
                 Sign in
               </Button>
             </form>
