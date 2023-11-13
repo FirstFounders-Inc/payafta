@@ -36,58 +36,56 @@ const Signup = () => {
           <SignupImage />
         </div>
         <div className="  flex  flex-col lg:flex-[40%]   px-4 ">
-         
-            <AuthLayout
-              bigText="Sign in"
-              smallParagraph="Enter your account details"
-              smallText="You don’t have an account?"
-              linkText="Create an account"
-              linkTo="/signup"
-              className="lg:justify-center lg:items-center"
-            >
-              <form onSubmit={handleSubmit(handle, err => console.log(err))} >
-                <ControlledInput
-                  label="Email"
-                  type="email"
-                  name="email"
-                  control={control}
-                />
-                <ControlledInput
-                  label="Password"
-                  type={showPassword ? 'text' : 'password'}
-                  name="password"
-                  control={control}
-                  endAdornment={
-                    showPassword ? (
-                      <EyeOpen onClick={handleShowPassword} />
-                    ) : (
-                      <EyeClosed onClick={handleShowPassword} />
-                    )
-                  }
-                />
-                <div className="flex justify-between items-center">
-                  <div className="flex ">
-                    <Checkbox />
-                    <p className="text-[12px]  font-medium leading-4 text-[#666666] pt-[12px] lg:w-[472px]">
-                      Remember me
-                    </p>
-                  </div>
-                  <Link
-                    to="/forgot-password"
-                    className="text-[12px] whitespace-nowrap text-[#03045B] font-medium"
-                  >
-                    Recover password?
-                  </Link>
+          <AuthLayout
+            bigText="Sign in"
+            smallParagraph="Enter your account details"
+            smallText="You don’t have an account?"
+            linkText="Create an account"
+            linkTo="/signup"
+            className="lg:justify-center lg:items-center"
+          >
+            <form onSubmit={handleSubmit(handle, err => console.log(err))}>
+              <ControlledInput
+                label="Email"
+                type="email"
+                name="email"
+                control={control}
+              />
+              <ControlledInput
+                label="Password"
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                control={control}
+                endAdornment={
+                  showPassword ? (
+                    <EyeOpen onClick={handleShowPassword} />
+                  ) : (
+                    <EyeClosed onClick={handleShowPassword} />
+                  )
+                }
+              />
+              <div className="flex justify-between items-center">
+                <div className="flex ">
+                  <Checkbox />
+                  <p className="text-[12px]  font-medium leading-4 text-[#666666] pt-[12px] lg:w-[472px]">
+                    Remember me
+                  </p>
                 </div>
-                <Button
-                  className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8 w-full"
-                  type="submit"
+                <Link
+                  to="/forgot-password"
+                  className="text-[12px] whitespace-nowrap text-[#03045B] font-medium"
                 >
-                  Sign in
-                </Button>
-              </form>
-            </AuthLayout>
-         
+                  Recover password?
+                </Link>
+              </div>
+              <Button
+                className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8 w-full"
+                type="submit"
+              >
+                Sign in
+              </Button>
+            </form>
+          </AuthLayout>
         </div>
       </div>
     </div>

@@ -35,6 +35,8 @@ const Login = () => {
           <Signin />
         </section>
         <section className="  flex  flex-col lg:flex-[40%]   px-4 ">
+          \]
+          
           <AuthLayout
             bigText="Sign in"
             smallParagraph="Enter your account details"
