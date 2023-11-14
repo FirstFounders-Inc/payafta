@@ -8,10 +8,10 @@ import { twMerge } from 'tailwind-merge';
 type Props = {
   children: ReactNode;
   bigText: string;
-  smallText: string;
+  smallText?: string;
   smallParagraph?: string;
 
-  linkTo: To;
+  linkTo?: To;
   linkText?: string;
   checkboxText?: string;
   link?: string;
@@ -46,7 +46,7 @@ const AuthLayout = ({
       </div>
       {children}
       {checkbox && checkboxText && (
-        <div className="flex ">
+        <div className="flex pt-2">
           <Checkbox />
           <p className="text-[12px]  font-medium leading-4 text-[#666666] pt-2 lg:w-[472px]">
             {checkboxText}

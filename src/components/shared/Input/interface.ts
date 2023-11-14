@@ -5,7 +5,7 @@ import { Control, FieldErrorsImpl, FieldValues, Path } from 'react-hook-form';
 
 type IInputAdornmentProps = Omit<InputAdornmentProps, 'position'>;
 
-interface IBaseControlledField<TFieldValues extends FieldValues> {
+export interface IBaseControlledField<TFieldValues extends FieldValues> {
   name: Path<TFieldValues>;
   control?: Control<TFieldValues>;
   errors?: Partial<FieldErrorsImpl<TFieldValues>>;

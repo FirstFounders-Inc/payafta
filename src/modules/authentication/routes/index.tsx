@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthPaths } from '../../../constant/paths';
 
 const Login = lazy(() => import('../Login'));
-const ForgotPassword = lazy(() => import('../ForgotPassword'));
+const ForgotPassword = lazy(() => import('../ForgotPassword/index'));
 const CreateNewPassword = lazy(() => import('../CreateNewPassword/index'));
 const CreatePasswordSuccess = lazy(
   () => import('../CreateNewPassword/CreatePasswordSuccess'),

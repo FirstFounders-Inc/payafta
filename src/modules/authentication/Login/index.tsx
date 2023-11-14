@@ -31,10 +31,10 @@ const Login = () => {
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full justify-center">
-        <section className="hidden lg:flex lg:flex-[60%] ">
+        <div className="hidden lg:flex lg:flex-[60%] ">
           <Signin />
-        </section>
-        <section className="  flex  flex-col lg:flex-[40%]   px-4 ">
+        </div>
+        <div className="  flex  flex-col lg:flex-[40%]   px-4 ">
           <AuthLayout
             bigText="Sign in"
             smallParagraph="Enter your account details"
@@ -85,8 +85,7 @@ const Login = () => {
               </Button>
             </form>
           </AuthLayout>
-          {/* <div className="grid h-full place-content-center"></div> */}
-        </section>
+        </div>
       </div>
     </div>
   );
