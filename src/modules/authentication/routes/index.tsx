@@ -4,6 +4,7 @@ import { AuthPaths } from '../../../constant/paths';
 
 const Login = lazy(() => import('../Login'));
 const ForgotPassword = lazy(() => import('../ForgotPassword/index'));
+const VerifyToken = lazy(() => import('../VerifyToken/index'));
 const CreateNewPassword = lazy(() => import('../CreateNewPassword/index'));
 const CreatePasswordSuccess = lazy(
   () => import('../CreateNewPassword/CreatePasswordSuccess'),
@@ -28,6 +29,7 @@ const AuthRouter = () => {
           element={<CreatePasswordSuccess />}
         />
         <Route path={AuthPaths.FORGOT_PASSWORD} element={<ForgotPassword />} />
+        <Route path={AuthPaths.VERIFY_TOKEN} element={<VerifyToken/>} />
         <Route path={AuthPaths.SIGNUP} element={<Signup />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>

@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full justify-center">
-        <div className="hidden lg:flex lg:flex-[60%] ">
+        <div className="hidden lg:flex lg:flex-[60%] w-full h-full">
           <Signin />
         </div>
         <div className="  flex  flex-col lg:flex-[40%]   px-4 ">
