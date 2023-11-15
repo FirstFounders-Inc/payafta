@@ -1,7 +1,7 @@
 import Logo from '@assets/svg/Logo.svg?react';
-import ResetPassword from '@assets/svg/reset-password 1.svg?react'
+import ResetPassword from '@assets/svg/reset-password 1.svg?react';
 import Button from '@components/shared/Button';
-import RightArrow  from '@assets/icons/rightAccordion.svg?react'
+import RightArrow from '@assets/icons/rightAccordion.svg?react';
 import { Link } from 'react-router-dom';
 
 const CreatePasswordSuccess = () => {
@@ -18,7 +18,7 @@ const CreatePasswordSuccess = () => {
             <p className="text-[14px] leading-[18px] text-[#4D4D4D] pb-4">
               Please return to the login page to sign in with your new password.
             </p>
-            <Link to="/signin" className='w-full'>
+            <Link to="/signin" className="w-full">
               <Button
                 className="bg-[#03045B] w-full rounded-[48px] mx-2 mt-4 py-2"
                 type="submit"
