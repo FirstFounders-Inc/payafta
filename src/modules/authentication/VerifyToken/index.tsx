@@ -4,10 +4,9 @@ import OtpInput from './components/OtpInput';
 import AuthLayout from '@components/Layout/AuthLayout';
 import Button from '@components/shared/Button';
 
-
 const VerifyToken = () => {
-     const [otp, setOtp] = useState('');
-     const onChange = (value: string) => setOtp(value);
+  const [otp, setOtp] = useState('');
+  const onChange = (value: string) => setOtp(value);
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full md:items-center md:justify-center">
@@ -19,7 +18,7 @@ const VerifyToken = () => {
             bigText="Verification"
             smallText="Enter the 4 digit sent to +2347011223344."
           >
-            <p className="text-[16px] leading-[22px] text-[#333333] pt-8 pb-2" >
+            <p className="text-[16px] leading-[22px] text-[#333333] pt-8 pb-2">
               Enter Verification Code{' '}
             </p>
             <OtpInput value={otp} valueLength={4} onChange={onChange} />

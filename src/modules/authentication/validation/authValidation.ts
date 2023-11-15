@@ -23,3 +23,7 @@ export const signupSchema = yup.object({
     .oneOf([yup.ref('password')], 'Passwords do not match')
     .required('Required'),
 });
+
+export const forgotPasswordSchema = yup.object({
+  email: yup.string().required('Email is required'),
+});

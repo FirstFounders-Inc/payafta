@@ -29,7 +29,7 @@ const AuthRouter = () => {
           element={<CreatePasswordSuccess />}
         />
         <Route path={AuthPaths.FORGOT_PASSWORD} element={<ForgotPassword />} />
-        <Route path={AuthPaths.VERIFY_TOKEN} element={<VerifyToken/>} />
+        <Route path={AuthPaths.VERIFY_TOKEN} element={<VerifyToken />} />
         <Route path={AuthPaths.SIGNUP} element={<Signup />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>

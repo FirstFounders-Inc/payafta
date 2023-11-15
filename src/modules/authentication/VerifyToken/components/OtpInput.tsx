@@ -4,7 +4,7 @@ type Props = {
   onChange: (value: string) => void;
 };
 
-const OtpInput = ({ valueLength}: Props) => {
+const OtpInput = ({ valueLength }: Props) => {
   return (
     <div>
       <div className="flex w-full max-w-[360px] gap-[10px]">
@@ -18,8 +18,6 @@ const OtpInput = ({ valueLength}: Props) => {
             maxLength={valueLength}
             value={digit}
             className="w-full h-[60px] border-[1px] rounded-[5px] text-center font-bold text-[32px] leading-3"
-            
-
           />
         ))}
       </div>
