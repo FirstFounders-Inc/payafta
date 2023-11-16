@@ -13,7 +13,7 @@ export interface IBaseControlledField<TFieldValues extends FieldValues> {
 
 export type IInputProps = Omit<OutlinedInputProps, 'type'> &
   IFieldHelperTextProps & {
-    label: string;
+    label?: string;
 
     startAdornmentProps?: IInputAdornmentProps;
     endAdornmentProps?: IInputAdornmentProps;
@@ -25,5 +25,11 @@ export type IControlledInputProps<TFieldValues extends FieldValues> = Omit<
 > &
   IBaseControlledField<TFieldValues> & {
     name: string;
-    type?: 'text' | 'number' | 'password' | 'email';
+    type?: 'text' | 'number' | 'password' | 'email' | 'date';
+  };
+
+export type IDate<TFieldValues extends FieldValues> =
+  IBaseControlledField<TFieldValues> & {
+    label?: string;
+    className?: string;
   };

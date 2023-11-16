@@ -12,7 +12,7 @@ const VerifyToken = () => {
   });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const onForm = (data: any ) => {
+  const onForm = (data: any) => {
     console.log(data);
     const payload = [...data.token];
     console.log(payload.join(''));

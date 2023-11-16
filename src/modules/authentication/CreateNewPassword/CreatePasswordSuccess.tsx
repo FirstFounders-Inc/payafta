@@ -4,7 +4,18 @@ import Button from '@components/shared/Button';
 import RightArrow from '@assets/icons/rightAccordion.svg?react';
 import { Link } from 'react-router-dom';
 
+// import { useForm } from 'react-hook-form';
+
 const CreatePasswordSuccess = () => {
+  // const {control, handleSubmit} = useForm({
+  //   defaultValues:{
+  //     date: ''
+  //   }
+  // })
+
+  // const handleSub = (data) => {
+  //   console.log(data)
+  // }
   return (
     <div className=" w-full h-full">
       <div className="w-full h-full flex flex-col items-center justify-center pt-16 px-4">
@@ -30,6 +41,9 @@ const CreatePasswordSuccess = () => {
           </div>
         </div>
       </div>
+      <form>
+        <button type="submit">click</button>
+      </form>
     </div>
   );
 };
