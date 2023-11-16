@@ -4,10 +4,9 @@ import { IFieldHelperTextProps } from '../FieldHelperText/interface';
 
 export type IInputPhoneNumberProps = IFieldHelperTextProps & {
   label?: string;
-  // name: string;
+
   value: string;
-  onChange: (data: string) => void
-  className?: string;
+  onChange: (data: string) => void;
 };
 
 export type IControlledPhoneNumberInput<TFieldValues extends FieldValues> =

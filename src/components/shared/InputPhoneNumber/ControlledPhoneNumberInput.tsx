@@ -2,7 +2,6 @@ import InputPhoneNumber from '.';
 import { Controller, FieldValues } from 'react-hook-form';
 import { IControlledPhoneNumberInput } from './interface';
 
-
 const ControlledPhoneNumberInput = <TFieldValue extends FieldValues>(
   props: IControlledPhoneNumberInput<TFieldValue>,
 ) => {
@@ -11,7 +10,7 @@ const ControlledPhoneNumberInput = <TFieldValue extends FieldValues>(
     <Controller
       control={control}
       name={cname}
-      render={({ field: { onChange,...fields }, fieldState }) => (
+      render={({ field: { onChange, ...fields }, fieldState }) => (
         <InputPhoneNumber
           {...rest}
           {...fields}

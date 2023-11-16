@@ -12,6 +12,7 @@ import EyeClosed from '@assets/icons/eyeClosed.svg?react';
 import { Link } from 'react-router-dom';
 import Button from '@components/shared/Button';
 import { ISignupInput } from '@interfaces/auth.interface';
+import ControlledPhoneNumberInput from '@components/shared/InputPhoneNumber/ControlledPhoneNumberInput';
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -21,6 +22,7 @@ const Signup = () => {
       firstname: '',
       lastname: '',
       email: '',
+      phone: '',
       password: '',
       confirmpassword: '',
     },
@@ -44,7 +46,7 @@ const Signup = () => {
         <div className="hidden lg:flex lg:flex-[60%] bg-blue-600">
           <SignupImage className="w-full object-cover" />
         </div>
-        <div className="  flex  flex-col lg:flex-[40%]   px-4 lg:px-0 bg-red-300">
+        <div className="  flex  flex-col lg:flex-[40%]   px-4 lg:px-0 ">
           <AuthLayout
             bigText="Sign up"
             checkbox
@@ -78,6 +80,11 @@ const Signup = () => {
                 type="email"
                 name="email"
                 control={control}
+              />
+              <ControlledPhoneNumberInput
+                name="phone"
+                control={control}
+                label="Phone Number"
               />
 
               <ControlledInput

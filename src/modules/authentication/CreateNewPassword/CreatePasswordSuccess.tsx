@@ -4,7 +4,6 @@ import Button from '@components/shared/Button';
 import RightArrow from '@assets/icons/rightAccordion.svg?react';
 import { Link } from 'react-router-dom';
 
-
 //  import { useForm } from 'react-hook-form';
 
 const CreatePasswordSuccess = () => {
@@ -43,7 +42,7 @@ const CreatePasswordSuccess = () => {
           </div>
         </div>
       </div>
-      <form className="w-1/2" >
+      <form className="w-1/2">
         {/* <ControlledPhoneNumberInput label='phone' name='phone' control={control}/> */}
         <button type="submit">click</button>
       </form>
