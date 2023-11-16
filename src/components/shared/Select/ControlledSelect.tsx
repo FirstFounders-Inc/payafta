@@ -2,7 +2,6 @@ import { Controller, FieldValues } from 'react-hook-form';
 import Select from '.';
 import { IControlledSelect } from './interface';
 
-
 const ControlledSelect = <TFieldValue extends FieldValues>(
   props: IControlledSelect<TFieldValue>,
 ) => {

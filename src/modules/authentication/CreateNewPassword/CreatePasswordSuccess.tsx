@@ -4,20 +4,20 @@ import Button from '@components/shared/Button';
 import RightArrow from '@assets/icons/rightAccordion.svg?react';
 import { Link } from 'react-router-dom';
 
-// import { useForm } from 'react-hook-form';
 
+//  import { useForm } from 'react-hook-form';
 
 const CreatePasswordSuccess = () => {
   // const {control, handleSubmit} = useForm({
   //   defaultValues:{
-  //     bank: ''
+  //     phone: ''
   //   }
   // })
 
   // const handleSub = (data) => {
   //   console.log(data)
   // }
-  // onSubmit={handleSubmit(handleSub)} 
+  // onSubmit={handleSubmit(handleSub)}
   return (
     <div className=" w-full h-full">
       <div className="w-full h-full flex flex-col items-center justify-center pt-16 px-4">
@@ -43,15 +43,8 @@ const CreatePasswordSuccess = () => {
           </div>
         </div>
       </div>
-      <form className="w-1/2">
-        {/* <ControlledSelect
-          options={teer}
-          name="bank"
-          label="bank name"
-          placeholder="select bank name"
-          control={control}
-          searchable
-        /> */}
+      <form className="w-1/2" >
+        {/* <ControlledPhoneNumberInput label='phone' name='phone' control={control}/> */}
         <button type="submit">click</button>
       </form>
     </div>

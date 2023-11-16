@@ -31,6 +31,6 @@ export type ISelectProps = Omit<
     ) => React.ReactNode | string | number;
   };
 
-  export type IControlledSelect<TFieldValues extends FieldValues> =
-    IBaseControlledField<TFieldValues> &
-      Omit<ISelectProps, 'value' | 'name' | 'onChange'>;
+export type IControlledSelect<TFieldValues extends FieldValues> =
+  IBaseControlledField<TFieldValues> &
+    Omit<ISelectProps, 'value' | 'name' | 'onChange'>;

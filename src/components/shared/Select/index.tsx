@@ -10,11 +10,10 @@ import {
   MenuItem,
   SelectChangeEvent,
   Chip,
- 
 } from '@mui/material';
-import ChevronDown from '@assets/svg/chevron-down.svg?react'
-import XClose from '@assets/svg/x-close.svg?react'
-import Search from '@assets/svg/search.svg?react'
+import ChevronDown from '@assets/svg/chevron-down.svg?react';
+import XClose from '@assets/svg/x-close.svg?react';
+import Search from '@assets/svg/search.svg?react';
 
 import Input from '../Input';
 import FieldHelperText from '../FieldHelperText';
@@ -48,8 +47,8 @@ const Select = (props: ISelectProps) => {
     value || (multiple ? [] : ''),
   );
 
-  const [open, setOpen] = useState<boolean>(false)
-  const [searchQuery, setSearchQuery] = useState('')
+  const [open, setOpen] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const optionsLabelByValue = useMemo(() => {
     const optionsLabelByValue: Record<string, string> = {};
@@ -72,7 +71,6 @@ const Select = (props: ISelectProps) => {
     if (value && !isEqual(value, selectedValues)) {
       setSelectedValues(value);
     }
-   
   }, [value]);
 
   const onSelectedChange = (event: SelectChangeEvent<unknown>) => {
@@ -126,7 +124,7 @@ const Select = (props: ISelectProps) => {
   const searchResultValues: string[] = options
     .filter(option => !searchQuery || option.label.match(reg))
     .map(option => option.value);
-  
+
   return (
     <div className="w-full max-w-full h-max overflow-hidden">
       {label && <FieldLabel className={labelClassName}>{label}</FieldLabel>}
@@ -305,6 +303,6 @@ const Select = (props: ISelectProps) => {
       <FieldHelperText error={props.error} helperText={helperText} />
     </div>
   );
-          };
+};
 
 export default Select;
