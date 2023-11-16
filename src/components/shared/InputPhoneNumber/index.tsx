@@ -3,7 +3,6 @@ import 'react-phone-input-2/lib/semantic-ui.css';
 import FieldHelperText from '../FieldHelperText';
 import { IInputPhoneNumberProps } from './interface';
 
-
 import 'react-phone-number-input/style.css';
 
 const InputPhoneNumber = ({

@@ -2,20 +2,27 @@ import SignupImage from '@assets/svg/signup.svg?react';
 
 import AuthLayout from '@components/Layout/AuthLayout';
 import Button from '@components/shared/Button';
+import ControlledInput from '@components/shared/Input/ControlledInput';
+
 import { useForm } from 'react-hook-form';
 
 const VerifyToken = () => {
-  const { register, handleSubmit } = useForm({
+  const { control, handleSubmit } = useForm({
     defaultValues: {
       token: ['', '', '', ''],
     },
   });
+  // const[open, setOpen] = useState(false)
+  // const handleClose = () => {
+  //   setOpen(false)
+  // }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onForm = (data: any) => {
     console.log(data);
     const payload = [...data.token];
     console.log(payload.join(''));
+   
   };
   return (
     <div className="w-full ">
@@ -33,18 +40,21 @@ const VerifyToken = () => {
             </p>
             <form onSubmit={handleSubmit(onForm)}>
               <div className="flex w-full max-w-[360px] gap-[10px]">
-                {[1, 2, 3, 4].map((_digit, idx) => (
-                  <input
+                {Array.from({ length: 4 }).map((_digit, idx) => (
+                  <ControlledInput
                     key={idx}
                     type="text"
+                    name={`token.${idx}`}
                     inputMode="numeric"
                     autoComplete="one-time-code"
-                    pattern="\d{1}"
+                    control={control}
+                    //   pattern="\d{1}"
+
                     // maxLength={valueLength}
                     // value={digit}
 
-                    className="w-full h-[60px] border-[1px] rounded-[5px] text-center font-bold text-[32px] leading-3"
-                    {...register(`token.${idx}`)}
+                    className="w-full h-[40px] border-[1px] rounded-[5px] text-center font-bold text-[32px] leading-3"
+                    //   {...register(`token.${idx}`)}
                   />
                 ))}
               </div>
@@ -61,6 +71,10 @@ const VerifyToken = () => {
           </AuthLayout>
         </div>
       </div>
+      {/* <Modal onClose={handleClose} open={open}>
+        chidren
+        <button>close</button>
+      </Modal> */}
     </div>
   );
 };
