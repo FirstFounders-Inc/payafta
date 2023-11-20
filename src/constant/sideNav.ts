@@ -1,21 +1,19 @@
-import Dashboard from '@assets/icons/dashboard.svg?react'
-import DashboardBlue from '@assets/icons/dashboardIconBlue.svg?react'
-import Transactions from '@assets/icons/transactionIcon.svg?react'
-import TransactionsBlue from '@assets/icons/transactionBlueIcon.svg?react'
-import PaymentLinks from '@assets/icons/paymentLinkIcon.svg?react'
-import PaymentLinksBlue from '@assets/icons/paymentLinkBlue.svg?react'
-import VirtualCard from '@assets/icons/virtualCardIcon.svg?react'
-import VirtualCardBlue from '@assets/icons/virtualCardBlueIcon.svg?react'
-import Settings from '@assets/icons/setting.svg?react'
-import SettingsBlue from '@assets/icons/settingsBlueIcon.svg?react'
-import Support from '@assets/icons/support.svg?react'
-import SupportBlue from '@assets/icons/supportBlueIcon.svg?react'
-
+import Dashboard from '@assets/icons/dashboard.svg?react';
+import DashboardBlue from '@assets/icons/dashboardIconBlue.svg?react';
+import Transactions from '@assets/icons/transactionIcon.svg?react';
+import TransactionsBlue from '@assets/icons/transactionBlueIcon.svg?react';
+import PaymentLinks from '@assets/icons/paymentLinkIcon.svg?react';
+import PaymentLinksBlue from '@assets/icons/paymentLinkBlue.svg?react';
+import VirtualCard from '@assets/icons/virtualCardIcon.svg?react';
+import VirtualCardBlue from '@assets/icons/virtualCardBlueIcon.svg?react';
+import Settings from '@assets/icons/setting.svg?react';
+import SettingsBlue from '@assets/icons/settingsBlueIcon.svg?react';
+import Support from '@assets/icons/support.svg?react';
+import SupportBlue from '@assets/icons/supportBlueIcon.svg?react';
 
 import { DashboardPath } from './paths';
 
-
-type SvgInHtml = typeof Dashboard
+type SvgInHtml = typeof Dashboard;
 
 type NavLink = {
   name: string;
@@ -25,14 +23,13 @@ type NavLink = {
   disabled?: boolean;
 };
 
-
 const ADMIN_SIDENAV: NavLink[] = [
   {
     name: 'Dashboard',
     path: DashboardPath.DASHBOARD,
     Icon: Dashboard,
     IconBlue: DashboardBlue,
-    disabled: true,
+    // disabled: true,
   },
   {
     name: 'Transactions',
@@ -65,6 +62,5 @@ const ADMIN_SIDENAV: NavLink[] = [
     IconBlue: SupportBlue,
   },
 ];
-
 
 export { ADMIN_SIDENAV };
