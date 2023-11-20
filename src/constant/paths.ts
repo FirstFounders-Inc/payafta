@@ -10,6 +10,7 @@ export const AuthPaths = {
   CREATE_PASSWORD_SUCCESS: 'create-password-success',
   SIGNUP: 'signup',
   VERIFY_TOKEN: 'verify-token',
+  VERIFY: 'verify',
 };
 
 export const DashboardPath = {

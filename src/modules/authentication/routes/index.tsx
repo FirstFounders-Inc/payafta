@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthPaths } from '../../../constant/paths';
+import GetStarted from '../Verify/GetStarted';
 
 const Login = lazy(() => import('../Login'));
 const ForgotPassword = lazy(() => import('../ForgotPassword/index'));
@@ -30,6 +31,7 @@ const AuthRouter = () => {
         />
         <Route path={AuthPaths.FORGOT_PASSWORD} element={<ForgotPassword />} />
         <Route path={AuthPaths.VERIFY_TOKEN} element={<VerifyToken />} />
+        <Route path={AuthPaths.VERIFY} element={<GetStarted />} />
         <Route path={AuthPaths.SIGNUP} element={<Signup />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>

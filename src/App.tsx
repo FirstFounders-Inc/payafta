@@ -1,22 +1,22 @@
 import PageNotFound from '@modules/authentication/PageNotFound';
 import BaseRoutes from 'constant/baseRoutes';
 import { Route, Routes } from 'react-router-dom';
-import PrivateRoute from 'routes/PrivateRoute';
+// import PrivateRoute from 'routes/PrivateRoute';
 
 function App() {
   return (
     <Routes>
-      {BaseRoutes.map(({ path, Layout, useAuth, component: Component }) =>
-        Layout && useAuth ? (
+      {BaseRoutes.map(({ path, Layout, component: Component }) =>
+        Layout ? (
           <Route
             key={path}
             path={path}
             element={
-              <PrivateRoute>
-                <Layout key={path}>
-                  <Component />
-                </Layout>
-              </PrivateRoute>
+              // <PrivateRoute>
+              <Layout key={path}>
+                <Component />
+              </Layout>
+              // </PrivateRoute>
             }
           />
         ) : (

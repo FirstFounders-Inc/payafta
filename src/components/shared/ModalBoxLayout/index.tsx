@@ -9,7 +9,7 @@ const ModalBoxLayout = ({
     openModalBox && (
       <div className="relative">
         <div
-          className="fixed inset-0 z-[99999] transition-opacity bg-gray-500 bg-opacity-75 overflow-auto"
+          className="fixed inset-0 z-[30] transition-opacity bg-gray-500 bg-opacity-75 overflow-auto"
           onClick={onBackgroundClick}
         >
           <div className="flex fixed inset-0 z-10 overflow-y-auto overflow-x-hidden">

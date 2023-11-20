@@ -4,6 +4,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 const initialState = {
   openModal: false,
   modalType: '',
+  // isDone: [],
+  // isActive: '',
 } as IModalPopType;
 
 const modalSlice = createSlice({
@@ -17,6 +19,9 @@ const modalSlice = createSlice({
       state.openModal = payload.openModal;
       state.modalType = payload.modalType;
     },
+    // updateIsDone(state: IModalPopType, { payload }: PayloadAction<number>) {
+    //   state.isDone = state.isDone.push(payload);
+    // },
   },
 });
 

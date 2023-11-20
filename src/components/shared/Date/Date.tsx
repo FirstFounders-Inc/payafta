@@ -6,8 +6,8 @@ const Date = <TFieldValue extends FieldValues>(props: IDate<TFieldValue>) => {
   const { name, className, label, control } = props;
   return (
     <div>
-      {label && <div className="pl-2">{label}</div>}
-      <div className="w-[18%] h-max rounded-md">
+      {label && <div className="pl-2 text-[#333333]">{label}</div>}
+      <div className=" rounded-md">
         <ControlledInput
           control={control}
           name={name}

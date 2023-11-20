@@ -17,8 +17,8 @@ const Input = (props: IInputProps) => {
     ...rest
   } = props;
   return (
-    <div className="w-full max-w-full overflow-hidden flex flex-col p-2">
-      {label && <label className="pb-[3px]">{label}</label>}
+    <div className="w-full max-w-full overflow-hidden flex flex-col py-2">
+      {label && <label className="pb-[3px] text-[#333333]">{label}</label>}
       <OutlinedInput
         {...rest}
         classes={{
