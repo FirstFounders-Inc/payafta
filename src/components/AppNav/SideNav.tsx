@@ -32,9 +32,7 @@ const SideNav = () => {
               <sidenav.Icon />
             )}
 
-            <span >
-              {sidenav.name}
-            </span>
+            <span>{sidenav.name}</span>
           </NavLink>
         ))}
       </div>

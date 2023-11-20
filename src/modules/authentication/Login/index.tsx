@@ -78,7 +78,7 @@ const Login = () => {
                 </Link>
               </div>
               <Button
-                className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8 w-full"
+                className="rounded-[48px] p-[14px] bg-primary text-[#fff]  mt-8 w-full"
                 type="submit"
               >
                 Sign in

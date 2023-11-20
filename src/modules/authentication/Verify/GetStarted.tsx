@@ -5,17 +5,15 @@ import SettlementKYC from './components/SettlementKYC/SettlementKYC';
 import TransactionPIN from './components/TransactionPIN/TransactionPIN';
 import Button from '@components/shared/Button';
 import GettingStartedModal from './components/GettingStartedModal';
+import { IFormCheck } from '@interfaces/auth.interface';
 
 // type Props = Record<number, React.ReactNode>;
 // [key: number]: {React.ReactNode};
 
-export type IFormCheck = {
-  isDone: number[];
-  isActive: number;
-};
+
 
 const GetStarted = () => {
-  // const [currentStep, setCurrentStep] = useState(1);
+
   const [formCheck, setFormCheck] = useState<IFormCheck>({
     isDone: [],
     isActive: 1,
@@ -30,17 +28,13 @@ const GetStarted = () => {
             : formCheck.isActive,
         isDone: [...formCheck.isDone, formCheck.isActive],
       });
-      // setCurrentStep(currentStep + 1);
+      
     }
   };
 
-  // const verificationSteps: Props = {
-  //   1: <PersonalKYC />,
-  //   2: <SettlementKYC />,
-  //   3: <TransactionPIN />,
-  // };
+  
 
-  console.log(formCheck.isDone);
+  
 
   return (
     <div className="w-full h-screen  bg-[#f9f9f9]">

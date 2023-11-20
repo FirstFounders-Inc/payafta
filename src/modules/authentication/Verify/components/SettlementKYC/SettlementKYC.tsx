@@ -4,13 +4,12 @@ import Button from '@components/shared/Button';
 import { useAppDispatch } from 'redux/hooks';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import Check from '@assets/icons/grrenCheck.svg?react';
-import { IFormCheck } from '../../GetStarted';
+import { IFormCheckProps } from '@interfaces/auth.interface';
 
-type Props = {
-  formCheck: IFormCheck;
-};
 
-const SettlementKYC = ({ formCheck }: Props) => {
+
+
+const SettlementKYC = ({ formCheck }: IFormCheckProps) => {
   const dispatch = useAppDispatch();
 
   return (
@@ -29,7 +28,7 @@ const SettlementKYC = ({ formCheck }: Props) => {
             <Check />
           ) : (
             <Button
-              className="bg-[#03045B] rounded-[40px] px-10 py-2"
+              className="bg-primary rounded-[40px] px-10 py-2"
               onClick={() => {
                 dispatch(
                   setOpenModal({

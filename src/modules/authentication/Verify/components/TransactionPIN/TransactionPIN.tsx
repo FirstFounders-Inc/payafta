@@ -1,14 +1,14 @@
 import Button from '@components/shared/Button';
 import RightArrow from '@assets/icons/rightAccordion.svg?react';
-import { IFormCheck } from '../../GetStarted';
+
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 import Check from '@assets/icons/grrenCheck.svg?react';
-type Props = {
-  formCheck: IFormCheck;
-};
+import {  IFormCheckProps } from '@interfaces/auth.interface';
 
-const TransactionPIN = ({ formCheck }: Props) => {
+
+
+const TransactionPIN = ({ formCheck }: IFormCheckProps) => {
   const dispatch = useAppDispatch();
   return (
     <div className=" mx-4 mb-4">
@@ -26,7 +26,7 @@ const TransactionPIN = ({ formCheck }: Props) => {
             <Check />
           ) : (
             <Button
-              className="bg-[#03045B] rounded-[40px] px-10 py-2"
+              className="bg-primary rounded-[40px] px-10 py-2"
               disabled={formCheck.isActive !== 3}
               onClick={() => {
                 dispatch(

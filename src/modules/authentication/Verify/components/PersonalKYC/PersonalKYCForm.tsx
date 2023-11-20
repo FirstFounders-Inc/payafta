@@ -81,7 +81,7 @@ const PersonalKYCForm = ({ handleNext }: { handleNext: () => void }) => {
         />
         <div className="flex justify-end  pt-4">
           <Button
-            className="bg-[#03045B] rounded-[40px] px-14 py-2 flex justify-end"
+            className="bg-primary rounded-[40px] px-14 py-2 flex justify-end"
             onClick={handleNextForm}
           >
             Submit

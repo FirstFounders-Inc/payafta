@@ -13,7 +13,7 @@ const Navbar = () => {
           </button>
         </Link>
 
-        <button className="hidden md:block rounded-[48px] px-[18px] bg-[#03045B] text-[#fff]">
+        <button className="hidden md:block rounded-[48px] px-[18px] bg-primary text-[#fff]">
           Get Started
         </button>
       </div>
