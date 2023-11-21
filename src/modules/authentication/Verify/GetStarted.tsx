@@ -29,10 +29,10 @@ const GetStarted = () => {
   };
 
   return (
-    <div className="w-full h-screen  bg-[#f9f9f9]">
-      <div className="flex flex-col items-center justify-center pt-12">
+    <div className="w-full h-screen  bg-[#f9f9f9] p-4 lg:p-0">
+      <div className="flex flex-col lg:items-center lg:justify-center pt-12">
         <Logo />
-        <div className="w-[638px] h-[518px] rounded-[8px] bg-[#fff] mt-16 flex flex-col ">
+        <div className=" w-full lg:w-[638px] lg:h-[518px] rounded-[8px] bg-[#fff] mt-16 flex flex-col ">
           <div className="h-[60px] flex justify-between m-4">
             <h3 className="text-[16px] text-[#010101] leading-5 font-semibold">
               Verification Needed
@@ -45,7 +45,7 @@ const GetStarted = () => {
           <SettlementKYC formCheck={formCheck} />
           <TransactionPIN formCheck={formCheck} />
           <Button
-            className="bg-primary rounded-[48px] p-4 mx-28"
+            className="bg-primary rounded-[48px] p-4 md:mx-28"
             disabled={formCheck.isDone.length !== 3}
           >
             Submit Verification

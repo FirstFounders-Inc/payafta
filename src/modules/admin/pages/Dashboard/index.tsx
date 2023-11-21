@@ -1,6 +1,6 @@
 import Bell from '@assets/icons/bell.svg?react';
 import DashboardSettings from '@assets/icons/dashboardSettings.svg?react';
-import { balance} from 'db/dashboard';
+import { balance } from 'db/dashboard';
 import EyeOpen from '@assets/icons/eye.svg?react';
 import Warning from '@assets/icons/warning.svg?react';
 import WalletService from './components/WalletService';

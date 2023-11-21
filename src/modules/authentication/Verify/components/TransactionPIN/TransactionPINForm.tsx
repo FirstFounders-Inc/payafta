@@ -21,7 +21,7 @@ const TransactionPINForm = ({ handleNext }: { handleNext: () => void }) => {
     },
   });
   return (
-    <div className="w-[500px] bg-[#fff]  rounded-2xl p-6 grid gap-y-2">
+    <div className="  lg:w-[500px] bg-[#fff]  rounded-2xl p-6 grid gap-y-2">
       <form>
         <p>Enter Verification code</p>
         <div className="flex w-full max-w-[360px] gap-[10px]">
@@ -64,12 +64,14 @@ const TransactionPINForm = ({ handleNext }: { handleNext: () => void }) => {
           ))}
         </div>
       </form>
-      <Button
-        className="bg-primary rounded-[40px] px-14 py-2 flex justify-end"
-        onClick={handleNextForm}
-      >
-        Submit
-      </Button>
+      <div className='flex justify-end'>
+        <Button
+          className="bg-primary rounded-[40px] px-14 py-2 flex justify-end"
+          onClick={handleNextForm}
+        >
+          Submit
+        </Button>
+      </div>
     </div>
   );
 };

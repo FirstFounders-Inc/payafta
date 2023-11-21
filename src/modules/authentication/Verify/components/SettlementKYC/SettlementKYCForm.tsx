@@ -32,7 +32,7 @@ const SettlementKYCForm = ({ handleNext }: { handleNext: () => void }) => {
   };
 
   return (
-    <div className="w-[500px] bg-[#fff]  rounded-2xl p-6 grid gap-y-4">
+    <div className="md:w-[500px] bg-[#fff]  rounded-2xl p-6 grid gap-y-4">
       <div className="flex justify-between">
         <h3 className="text-[20px]  text-[#333333] leading-[26px] font-semibold">
           Settlement KYC

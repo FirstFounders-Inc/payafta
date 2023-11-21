@@ -11,16 +11,16 @@ const SettlementKYC = ({ formCheck }: IFormCheckProps) => {
 
   return (
     <div className=" m-4">
-      <div className="flex justify-between  bg-[#FFFFFF] border-[1px] rounded-[8px] p-6 border-[#f2f2f2] w-[606px] h-[96px]">
+      <div className="flex flex-col lg:flex-row lg:justify-between  bg-[#FFFFFF] border-[1px] rounded-[8px] p-6 border-[#f2f2f2] lg:w-[606px] lg:h-[96px]">
         <div>
           <h3 className="text-[#333333] text-[16px] font-semibold leading-5">
             Settlement KYC
           </h3>
-          <p className="text-[#666666] text-[14px] leading-4">
+          <p className="text-[#666666] text-[14px] leading-4 pb-2">
             Add bank account for payout
           </p>
         </div>
-        <div>
+        <div className="flex justify-end">
           {formCheck.isDone.includes(2) ? (
             <Check />
           ) : (
