@@ -3,14 +3,18 @@ import { ADMIN_SIDENAV } from 'constant/sideNav';
 import { NavLink, useLocation } from 'react-router-dom';
 import LogOutButton from '@assets/icons/power-button.svg?react';
 import Avatar from '@assets/svg/avartar.svg?react';
+import Harmburger from '@assets/icons/hamburger.svg?react';
 
 const SideNav = () => {
   const location = useLocation();
   const pathName = location.pathname.split('/')[2];
+
   return (
-    <div className="bg-[#FFFFFF] flex flex-col border-[1px] border-[#F2F2F2] text-[#666666]  h-[680px] rounded-[8px] p-5">
-      <div>
-        <Logo className="w-[176px] h-[64px]" />
+    <div className=" hidden bg-[#FFFFFF] lg:flex flex-col border-[1px] border-[#F2F2F2] text-[#666666]  h-[680px] rounded-[8px] p-5">
+      <div className=" flex items-center">
+        <Harmburger className="pr-2 lg:hidden w-[44px] h-[84px]" />
+
+        <Logo className=" w-[110px]  h-[40px] lg:w-[176px] lg:h-[64px]" />
       </div>
 
       <div className="pt-8 lex flex-col gap-2 ">

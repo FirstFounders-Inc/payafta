@@ -4,9 +4,7 @@ import RightArrow from '@assets/icons/rightAccordion.svg?react';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 import Check from '@assets/icons/grrenCheck.svg?react';
-import {  IFormCheckProps } from '@interfaces/auth.interface';
-
-
+import { IFormCheckProps } from '@interfaces/auth.interface';
 
 const TransactionPIN = ({ formCheck }: IFormCheckProps) => {
   const dispatch = useAppDispatch();

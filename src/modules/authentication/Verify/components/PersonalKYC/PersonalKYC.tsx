@@ -7,9 +7,6 @@ import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import Check from '@assets/icons/grrenCheck.svg?react';
 import { IFormCheckProps } from '@interfaces/auth.interface';
 
-
-
-
 const PersonalKYC = ({ formCheck }: IFormCheckProps) => {
   const dispatch = useAppDispatch();
 

@@ -10,10 +10,7 @@ import { IFormCheck } from '@interfaces/auth.interface';
 // type Props = Record<number, React.ReactNode>;
 // [key: number]: {React.ReactNode};
 
-
-
 const GetStarted = () => {
-
   const [formCheck, setFormCheck] = useState<IFormCheck>({
     isDone: [],
     isActive: 1,
@@ -28,13 +25,8 @@ const GetStarted = () => {
             : formCheck.isActive,
         isDone: [...formCheck.isDone, formCheck.isActive],
       });
-      
     }
   };
-
-  
-
-  
 
   return (
     <div className="w-full h-screen  bg-[#f9f9f9]">
