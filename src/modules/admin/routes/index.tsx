@@ -18,7 +18,7 @@ const Adminroute = () => {
       <Route path={DashboardPath.VIRTUAL_CARD} element={<VirtualCard />} />
       <Route path={DashboardPath.SETTINGS} element={<Settings />} />
       <Route path={DashboardPath.SUPPORT} element={<Support />} />
-      <Route path='/dashboard/create-payment' element={<CreatePaymentLink/>}/>
+      <Route path="/dashboard/create-payment" element={<CreatePaymentLink />} />
 
       <Route path="*" element={<Navigate to="/pageNotFound" replace />} />
     </Routes>

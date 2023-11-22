@@ -1,9 +1,5 @@
-
-
 const CreatePaymentLink = () => {
-  return (
-    <div>CreatePaymentLink</div>
-  )
-}
+  return <div className="bg-red-600">CreatePaymentLink</div>;
+};
 
-export default CreatePaymentLink
+export default CreatePaymentLink;

@@ -13,8 +13,8 @@ import { useNavigate } from 'react-router-dom';
 import DashboardModal from './components/Modal/DashboardModal';
 
 const Dashboard = () => {
-  const dispatch = useAppDispatch()
-  const navigate = useNavigate()
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-2 pt-6">
@@ -80,7 +80,7 @@ const Dashboard = () => {
         <RecentPaymentLink />
         <RecentTransactionLink />
       </div>
-      <DashboardModal/>
+      <DashboardModal />
     </div>
   );
 };

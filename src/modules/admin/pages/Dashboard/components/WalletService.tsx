@@ -8,7 +8,12 @@ export type IWalletService = {
   onClick: () => void;
 };
 
-const WalletService = ({ icon, smallText, className, onClick }: IWalletService) => {
+const WalletService = ({
+  icon,
+  smallText,
+  className,
+  onClick,
+}: IWalletService) => {
   return (
     <div className={twMerge(className, 'p-6')} onClick={onClick}>
       {icon}

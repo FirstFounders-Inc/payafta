@@ -17,8 +17,8 @@ const RootLayout = ({ children }: Props) => {
         </div>
       </aside>
       <main className=" h-screen lg:grid lg:auto-rows-max-auto overflow-auto px-6 pt-4 lg:pt-0">
-        <Header/>
-        {children}
+        <Header />
+        <div className='mt-[74px]'>{children}</div>
       </main>
     </section>
   );

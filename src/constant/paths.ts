@@ -23,5 +23,5 @@ export const DashboardPath = {
 };
 
 export const NestedDashboardPath = {
-  CREATE_PAYMENT: 'dashboard/create-payment'
-}
+  CREATE_PAYMENT: 'dashboard/create-payment',
+};

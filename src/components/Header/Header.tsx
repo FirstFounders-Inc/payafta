@@ -3,7 +3,7 @@ import DashboardSettings from '@assets/icons/dashboardSettings.svg?react';
 
 const Header = () => {
   return (
-    <div className="flex justify-between bg-[#fff] p-4 h-[64px]">
+    <div className="flex justify-between bg-[#fff] p-4 h-[64px] ">
       <p>Hi Paul</p>
       <div className="flex">
         <Bell className="mr-4" />

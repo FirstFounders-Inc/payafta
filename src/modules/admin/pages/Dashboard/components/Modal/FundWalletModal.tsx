@@ -6,18 +6,20 @@ import { useAppDispatch } from 'redux/hooks';
 const FundWalletModal = () => {
   const dispatch = useAppDispatch();
   return (
-    <div className="w-[500px] bg-colorWhite rounded-[8px] p-6 text-mainTextColor grid gap-y-4">
+    <div className="md:w-[500px] bg-colorWhite rounded-[8px] p-6 text-mainTextColor grid gap-y-4">
       <div className="flex justify-between">
         <h3 className="text-[24px] leading-7 font-semibold">
           Add Funds to Wallet
         </h3>
         <CloseIcon
-          onClick={() => dispatch(
-            setOpenModal({
-              openModal: false,
-              modalType: '',
-            }),
-          )}
+          onClick={() =>
+            dispatch(
+              setOpenModal({
+                openModal: false,
+                modalType: '',
+              }),
+            )
+          }
         />
       </div>
       <p className="text-subTextColor text-[16px] leading-5 font-normal ">

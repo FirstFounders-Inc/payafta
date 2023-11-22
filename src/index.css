@@ -39,7 +39,4 @@
     @apply lg:px-6 xl:px-12 w-full px-28 mx-auto max-w-8xl h-full;
   } */
 
-@font-face {
-  font-family: Millik Regular;
-  src: url('./assets/fonts/Millik\ Regular.otf') format('otf');
-}
+
