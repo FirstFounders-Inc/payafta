@@ -1,28 +1,18 @@
-import { walletServices } from 'db/dashboard';
+import { ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const WalletService = () => {
+export type IWalletService = {
+  icon: ReactNode;
+  smallText: string;
+  className?: string;
+  onClick: () => void;
+};
+
+const WalletService = ({ icon, smallText, className, onClick }: IWalletService) => {
   return (
-    <div className="mt-6 p-4 bg-[#fff] rounded-[8px] border-[1px] border-[#f2f2f2] shadow-sm lg:h-[172px]">
-      <p>Wallet services</p>
-      <div className="grid  md:grid-cols-3 ">
-        {walletServices.map(({ Icon, service, id }) => {
-          return (
-            <div
-              key={service}
-              className={`${
-                id === 3
-                  ? 'border-[0px]'
-                  : ' border-b-[1px] lg:border-r-[1px] border-[#f2f2f2]'
-              } p-6  `}
-            >
-              <Icon />
-              <h3 className="pt-4 text-[18px] font-medium leading-5">
-                {service}
-              </h3>
-            </div>
-          );
-        })}
-      </div>
+    <div className={twMerge(className, 'p-6')} onClick={onClick}>
+      {icon}
+      <h3 className="pt-4 text-[18px] font-medium leading-5">{smallText}</h3>
     </div>
   );
 };

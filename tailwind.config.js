@@ -5,6 +5,9 @@ export default {
     extend: {
       colors: {
         primary: '#03045B',
+        mainTextColor: '#333',
+        subTextColor: '#666',
+        colorWhite: '#fff',
       },
     },
   },

@@ -1,5 +1,6 @@
 import MobileSideNav from '@components/AppNav/MobileSideNav';
 import SideNav from '@components/AppNav/SideNav';
+import Header from '@components/Header/Header';
 import { ReactNode } from 'react';
 
 type Props = {
@@ -16,6 +17,7 @@ const RootLayout = ({ children }: Props) => {
         </div>
       </aside>
       <main className=" h-screen lg:grid lg:auto-rows-max-auto overflow-auto px-6 pt-4 lg:pt-0">
+        <Header/>
         {children}
       </main>
     </section>

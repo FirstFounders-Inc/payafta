@@ -19,7 +19,7 @@ const TransactionPIN = ({ formCheck }: IFormCheckProps) => {
             Set transaction PIN
           </p>
         </div>
-        <div className='flex justify-end'>
+        <div className="flex justify-end">
           {formCheck.isDone.includes(3) ? (
             <Check />
           ) : (

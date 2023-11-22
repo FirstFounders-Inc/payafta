@@ -21,3 +21,7 @@ export const DashboardPath = {
   SETTINGS: 'settings',
   SUPPORT: 'support',
 };
+
+export const NestedDashboardPath = {
+  CREATE_PAYMENT: 'dashboard/create-payment'
+}

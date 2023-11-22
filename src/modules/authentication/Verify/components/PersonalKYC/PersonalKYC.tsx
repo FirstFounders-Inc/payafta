@@ -21,7 +21,7 @@ const PersonalKYC = ({ formCheck }: IFormCheckProps) => {
             Additional details about you
           </p>
         </div>
-        <div className='flex justify-end'>
+        <div className="flex justify-end">
           {formCheck.isDone.includes(1) ? (
             <Check />
           ) : (

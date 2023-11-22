@@ -64,7 +64,7 @@ const TransactionPINForm = ({ handleNext }: { handleNext: () => void }) => {
           ))}
         </div>
       </form>
-      <div className='flex justify-end'>
+      <div className="flex justify-end">
         <Button
           className="bg-primary rounded-[40px] px-14 py-2 flex justify-end"
           onClick={handleNextForm}

@@ -16,7 +16,7 @@ const MobileSideNav = () => {
   };
   return (
     <div>
-      <div className="flex items-center">
+      <div className="flex items-center px-6">
         <Harmburger className="w-[44px] h-[84px] pr-2" onClick={handleToggle} />
         <Logo className="w-[110px]  h-[40px]" />
       </div>
