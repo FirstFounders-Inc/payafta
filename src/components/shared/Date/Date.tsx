@@ -4,7 +4,7 @@ import ControlledInput from '../Input/ControlledInput';
 import Asteric from '@assets/icons/Label.svg?react';
 
 const Date = <TFieldValue extends FieldValues>(props: IDate<TFieldValue>) => {
-  const { name, className, label, control ,asteric} = props;
+  const { name, className, label, control, asteric } = props;
   return (
     <div>
       {label && asteric ? (

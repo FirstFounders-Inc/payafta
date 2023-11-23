@@ -1,22 +1,21 @@
 import { twMerge } from 'tailwind-merge';
 import RadioBase from './RadioBase';
-import { IRadioProps } from './interface'
+import { IRadioProps } from './interface';
 import Asteric from '@assets/icons/Label.svg?react';
 
-
 const Radio = (props: IRadioProps) => {
-    const {
-      label,
-      labelClassName,
-      className,
-      radioBaseClassName,
-      optionClassName,
-      optionLabelClassName,
-      value: propValue,
-      asteric,
-      ...checkboxProps
-    } = props;
-    const value = propValue;
+  const {
+    label,
+    labelClassName,
+    className,
+    radioBaseClassName,
+    optionClassName,
+    optionLabelClassName,
+    value: propValue,
+    asteric,
+    ...checkboxProps
+  } = props;
+  const value = propValue;
   return (
     <div className={className}>
       {label && asteric ? (
@@ -39,6 +38,6 @@ const Radio = (props: IRadioProps) => {
       />
     </div>
   );
-}
+};
 
-export default Radio
+export default Radio;

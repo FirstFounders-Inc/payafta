@@ -5,9 +5,9 @@ import AddMore from '@assets/icons/addMore.svg?react';
 import { useForm } from 'react-hook-form';
 
 const MileStonePayment = () => {
-    const {control} = useForm()
+  const { control } = useForm();
   return (
-    <div className='pt-4'>
+    <div className="pt-4">
       <h3>How do you you want to pay your milestone</h3>
       <ControlledInput
         name="milestoneOne"
@@ -16,7 +16,7 @@ const MileStonePayment = () => {
         placeholder="Description"
         control={control}
       />
-      <div className='grid grid-cols-2 gap-2'>
+      <div className="grid grid-cols-2 gap-2">
         <Date name="deliver_date" control={control} />
         <ControlledInput name="amount" placeholder="₦0.00" control={control} />
       </div>

@@ -26,7 +26,7 @@ export type ISelectProps = Omit<
     placeholder?: React.ReactNode | string;
     searchable?: boolean;
     asteric?: boolean;
-   
+
     renderValue?: (
       selected: unknown,
       options: ISelectOption | Record<string, ISelectOption>,

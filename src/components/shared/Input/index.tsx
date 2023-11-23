@@ -1,8 +1,8 @@
 import { InputAdornment, OutlinedInput } from '@mui/material';
 import { IInputProps } from './interface';
 import { twMerge } from 'tailwind-merge';
-import FieldHelperText from '../FieldHelperText'
-import Asteric from '@assets/icons/Label.svg?react'
+import FieldHelperText from '../FieldHelperText';
+import Asteric from '@assets/icons/Label.svg?react';
 
 const Input = (props: IInputProps) => {
   const {
@@ -20,10 +20,14 @@ const Input = (props: IInputProps) => {
   return (
     <div className="w-full max-w-full overflow-hidden flex flex-col py-2">
       {/* {label && <label className="pb-[3px] text-[#333333]">{label}</label>} */}
-      {label && asteric ? <div className='flex items-center'>
-        <label>{label}</label>
-        <Asteric className='ml-[4px]'/>
-        </div> : <label className="pb-[3px] text-[#333333]">{label}</label>} 
+      {label && asteric ? (
+        <div className="flex items-center">
+          <label>{label}</label>
+          <Asteric className="ml-[4px]" />
+        </div>
+      ) : (
+        <label className="pb-[3px] text-[#333333]">{label}</label>
+      )}
       <OutlinedInput
         {...rest}
         classes={{

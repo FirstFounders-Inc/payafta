@@ -2,11 +2,10 @@ import { Controller, FieldValues } from 'react-hook-form';
 import { IControlledRadio } from './interface';
 import Radio from '.';
 
-
 const ControlledRadio = <TFieldValue extends FieldValues>(
   props: IControlledRadio<TFieldValue>,
 ) => {
-    const { control, name: cname, ...rest } = props;
+  const { control, name: cname, ...rest } = props;
   return (
     <Controller
       control={control}
@@ -28,4 +27,4 @@ const ControlledRadio = <TFieldValue extends FieldValues>(
   );
 };
 
-export default ControlledRadio
+export default ControlledRadio;

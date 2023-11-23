@@ -1,11 +1,11 @@
 export type IRecentTransactionsAndPayment = {
-    title: string;
-    link: string;
-    onClick: () => void;
-} 
+  title: string;
+  link: string;
+  onClick: () => void;
+};
 
 const RecentTransactionsAndPayment = (props: IRecentTransactionsAndPayment) => {
-  const {title, link} = props;
+  const { title, link } = props;
   return (
     <div className="bg-[#fff] rounded-[8px] border-[1px] border-[#f2f2f2] h-[526px] shadow-sm p-4 ">
       <div className="flex justify-between ">
@@ -30,4 +30,4 @@ const RecentTransactionsAndPayment = (props: IRecentTransactionsAndPayment) => {
   );
 };
 
-export default RecentTransactionsAndPayment
+export default RecentTransactionsAndPayment;

@@ -15,7 +15,6 @@ const RadioBase = ({
   optionLabelClassName,
   error,
   helperText,
- 
 }: IRadioProps) => {
   const [selectedValue, setSelectedValue] = useState<string>(value ?? '');
 

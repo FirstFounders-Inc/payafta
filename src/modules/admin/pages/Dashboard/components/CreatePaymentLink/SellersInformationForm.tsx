@@ -4,7 +4,7 @@ import ControlledSelect from '@components/shared/Select/ControlledSelect';
 import { useForm } from 'react-hook-form';
 
 const SellersInformationForm = () => {
-    const {control} = useForm()
+  const { control } = useForm();
   return (
     <div>
       <div className="flex gap-2 items-center">
@@ -17,7 +17,7 @@ const SellersInformationForm = () => {
           label="Transaction Type"
           control={control}
           asteric
-          placeholder='Select'
+          placeholder="Select"
         />
         <ControlledInput
           name="seller_name"
@@ -32,8 +32,8 @@ const SellersInformationForm = () => {
           label="Seller’s Email Address "
           asteric
           control={control}
-        //   multiline
-        //   rows={3}
+          //   multiline
+          //   rows={3}
         />
         <ControlledPhoneNumberInput
           name="seller_phone"
