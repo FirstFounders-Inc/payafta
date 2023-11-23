@@ -14,7 +14,7 @@ import {
 import ChevronDown from '@assets/svg/chevron-down.svg?react';
 import XClose from '@assets/svg/x-close.svg?react';
 import Search from '@assets/svg/search.svg?react';
-
+import Asteric from '@assets/icons/Label.svg?react';
 import Input from '../Input';
 import FieldHelperText from '../FieldHelperText';
 
@@ -39,6 +39,7 @@ const Select = (props: ISelectProps) => {
     IconComponent,
     classes,
     searchable,
+    asteric,
     ...rest
   } = props;
 
@@ -126,7 +127,15 @@ const Select = (props: ISelectProps) => {
 
   return (
     <div className="w-full max-w-full h-max overflow-hidden">
-      {label && <label className={labelClassName}>{label}</label>}
+      {/* {label && <label className={labelClassName}>{label}</label>} */}
+      {label && asteric ? (
+        <div className="flex items-center">
+          <label>{label}</label>
+          <Asteric className="ml-[4px]" />
+        </div>
+      ) : (
+        <label className={labelClassName}>{label}</label>
+      )}
       <MUISelect
         {...rest}
         displayEmpty={displayEmpty}

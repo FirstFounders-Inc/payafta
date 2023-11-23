@@ -4,7 +4,7 @@ import { IFieldHelperTextProps } from '../FieldHelperText/interface';
 
 export type IInputPhoneNumberProps = IFieldHelperTextProps & {
   label?: string;
-
+  asteric?: boolean;
   value: string;
   onChange: (data: string) => void;
 };

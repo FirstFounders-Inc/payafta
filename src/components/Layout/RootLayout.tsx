@@ -16,12 +16,18 @@ const RootLayout = ({ children }: Props) => {
           <MobileSideNav />
         </div>
       </aside>
-      <main className=" h-screen lg:grid lg:auto-rows-max-auto overflow-auto px-6 pt-4 lg:pt-0">
-        <Header />
-        <div className='mt-[74px]'>{children}</div>
+      <main className="grid grid-rows-[80px_1fr] lg:auto-rows-max-auto overflow-auto px-6 pt-4 lg:pt-0 h-screen">
+        <div>
+          <Header />
+        </div>
+        {/* <h1>hi</h1> */}
+        <div>{children}</div>
       </main>
     </section>
   );
 };
 
 export default RootLayout;
+
+// className =
+//   ' h-screen lg:grid lg:auto-rows-max-auto overflow-auto px-6 pt-4 lg:pt-0';

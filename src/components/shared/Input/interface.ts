@@ -1,6 +1,7 @@
 import { InputAdornmentProps, OutlinedInputProps } from '@mui/material';
 import { IFieldHelperTextProps } from '../FieldHelperText/interface';
 import { Control, FieldErrorsImpl, FieldValues, Path } from 'react-hook-form';
+
 // import { FieldValues } from 'react-hook-form';
 
 type IInputAdornmentProps = Omit<InputAdornmentProps, 'position'>;
@@ -14,7 +15,7 @@ export interface IBaseControlledField<TFieldValues extends FieldValues> {
 export type IInputProps = Omit<OutlinedInputProps, 'type'> &
   IFieldHelperTextProps & {
     label?: string;
-
+    asteric?: boolean;
     startAdornmentProps?: IInputAdornmentProps;
     endAdornmentProps?: IInputAdornmentProps;
   };
@@ -32,4 +33,5 @@ export type IDate<TFieldValues extends FieldValues> =
   IBaseControlledField<TFieldValues> & {
     label?: string;
     className?: string;
+    asteric?: boolean;
   };
