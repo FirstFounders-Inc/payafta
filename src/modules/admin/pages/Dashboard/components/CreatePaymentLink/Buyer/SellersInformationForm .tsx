@@ -3,10 +3,10 @@ import ControlledPhoneNumberInput from '@components/shared/InputPhoneNumber/Cont
 import ControlledSelect from '@components/shared/Select/ControlledSelect';
 import { useForm } from 'react-hook-form';
 
-const SellersOrBuyerInformationForm = () => {
+const SellersInformationForm = () => {
   const { control } = useForm();
   return (
-    <div className='pt-6'>
+    <div className="pt-6">
       <div className="grid grid-cols-2 gap-2 items-center">
         <ControlledSelect
           name="transaction_type"
@@ -46,4 +46,4 @@ const SellersOrBuyerInformationForm = () => {
   );
 };
 
-export default SellersOrBuyerInformationForm;
+export default SellersInformationForm;

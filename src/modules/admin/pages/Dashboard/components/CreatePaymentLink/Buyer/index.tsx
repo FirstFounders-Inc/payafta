@@ -2,12 +2,13 @@ import Button from '@components/shared/Button';
 import ItemForm from '../components/ItemForm';
 import PaymentType from '../components/PaymentType';
 
-import SellersOrBuyerInformationForm from '../components/SellersOrBuyerInformationForm';
+
+import SellersInformationForm from './SellersInformationForm ';
 
 const Buyer = () => {
   return (
     <>
-      <SellersOrBuyerInformationForm />
+      <SellersInformationForm />
       <ItemForm />
       <PaymentType />
       <div className="flex items-center justify-center pt-4">
