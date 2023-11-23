@@ -6,7 +6,7 @@ import PaymentLinks from '../pages/PaymentLinks';
 import VirtualCard from '../pages/VirtualCard';
 import Settings from '../pages/Settings';
 import Support from '../pages/Support';
-import CreatePaymentLink from '../pages/Dashboard/components/CreatePaymentLink/CreatePaymentLink';
+import CreatePaymentLink from '../pages/Dashboard/components/CreatePaymentLink';
 
 const Adminroute = () => {
   return (

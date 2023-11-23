@@ -1,9 +1,5 @@
-
-
 const Seller = () => {
-  return (
-    <div>Seller</div>
-  )
-}
+  return <div>Seller</div>;
+};
 
-export default Seller
+export default Seller;

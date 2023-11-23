@@ -1,20 +1,21 @@
-
 import Button from '@components/shared/Button';
-import ItemForm from '../ItemForm';
-import PaymentType from '../PaymentType';
-import SellersInformationForm from '../SellersInformationForm';
+import ItemForm from '../components/ItemForm';
+import PaymentType from '../components/PaymentType';
 
+import SellersOrBuyerInformationForm from '../components/SellersOrBuyerInformationForm';
 
 const Buyer = () => {
   return (
-    <div>
-      <SellersInformationForm />
+    <>
+      <SellersOrBuyerInformationForm />
       <ItemForm />
       <PaymentType />
-      <div className='flex items-center justify-center pt-4'>
-        <Button disabled className='px-12 rounded-[48px] py-[12px] text-[#fff]'>Create Payment Link</Button>
+      <div className="flex items-center justify-center pt-4">
+        <Button disabled className="px-12 rounded-[48px] py-[12px] text-[#fff]">
+          Create Payment Link
+        </Button>
       </div>
-    </div>
+    </>
   );
 };
 
