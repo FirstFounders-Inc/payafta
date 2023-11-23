@@ -39,7 +39,7 @@ const ForgotPassword = () => {
               control={control}
             />
             <Button
-              className="bg-[#03045B] w-full rounded-[48px] mx-2 mt-4 py-2"
+              className="bg-primary w-full rounded-[48px] mx-2 mt-4 py-2"
               type="submit"
             >
               Send Recovery Link

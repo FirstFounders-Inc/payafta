@@ -7,23 +7,28 @@ import ErrorBoundary from './components/shared/ErrorboundaryFallback/Errorbounda
 import SuspenseWithFallback from './components/shared/SuspenseWithFallback/SuspenseWithFallback.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
+import { store } from 'redux/store.ts';
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <StyledEngineProvider injectFirst>
-        <ErrorBoundary>
-          <Routes>
-            <Route
-              element={
-                <SuspenseWithFallback>
-                  <App />
-                </SuspenseWithFallback>
-              }
-              path="/*"
-            />
-          </Routes>
-        </ErrorBoundary>
-      </StyledEngineProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <StyledEngineProvider injectFirst>
+          <ErrorBoundary>
+            <Routes>
+              <Route
+                element={
+                  <SuspenseWithFallback>
+                    <App />
+                  </SuspenseWithFallback>
+                }
+                path="/*"
+              />
+            </Routes>
+          </ErrorBoundary>
+        </StyledEngineProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 );

@@ -23,8 +23,10 @@ export type ISelectProps = Omit<
     onChange?: (value: string | string[]) => void;
     showSelectAll?: boolean;
     showChipPreview?: boolean;
-    placeholder?: React.ReactNode;
+    placeholder?: React.ReactNode | string;
     searchable?: boolean;
+    asteric?: boolean;
+
     renderValue?: (
       selected: unknown,
       options: ISelectOption | Record<string, ISelectOption>,

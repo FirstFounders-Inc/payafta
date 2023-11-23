@@ -27,7 +27,7 @@ const SafePayment = () => {
               <p className="text-[#333333] text-[16px] md:text-[20px] leading-[20px] md:leading-[25px] font-medium  md:w-[649px] mb-[24px]">
                 {el?.paragraph}
               </p>
-              <button className="flex gap-2  rounded-[31px] lg:rounded-[48px] bg-[#03045B]  p-4 lg:p-6">
+              <button className="flex gap-2  rounded-[31px] lg:rounded-[48px] bg-primary p-4 lg:p-6">
                 <p className="text-[#fff]">{el?.button}</p>
                 <img src={rightAccordion} alt="an accordion" />
               </button>

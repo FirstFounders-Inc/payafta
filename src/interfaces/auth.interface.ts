@@ -10,3 +10,12 @@ export type ISignupInput = {
   password: string;
   confirmpassword: string;
 };
+
+export type IFormCheck = {
+  isDone: number[];
+  isActive: number;
+};
+
+export type IFormCheckProps = {
+  formCheck: IFormCheck;
+};

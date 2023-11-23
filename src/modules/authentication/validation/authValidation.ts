@@ -43,3 +43,22 @@ export const createNewPasswordSchema = yup.object({
     .oneOf([yup.ref('password')], 'Passwords do not match')
     .required('Required'),
 });
+
+export const personalKYCSchema = yup.object({
+  firstname: yup.string().required('Firstname is required'),
+  lastname: yup.string().required('Lastname is required'),
+  gender: yup.string().required('Gender is required'),
+  date: yup.string().required('Date is required'),
+  instagram: yup.string().notRequired() as yup.StringSchema<string>,
+  facebooke: yup.string().notRequired() as yup.StringSchema<string>,
+});
+
+export const settlementKYCSchema = yup.object({
+  bank_name: yup.string().required('Bank name is required'),
+  account_number: yup
+    .string()
+    .min(6, 'Account number must be at least 6 digits')
+    .required('Account number is required')
+    .matches(/^[^a-zA-Z]+$/, 'Account number should not contain letters'),
+  BVN: yup.string().required('BVN number is required'),
+});

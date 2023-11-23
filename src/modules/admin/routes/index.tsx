@@ -6,6 +6,7 @@ import PaymentLinks from '../pages/PaymentLinks';
 import VirtualCard from '../pages/VirtualCard';
 import Settings from '../pages/Settings';
 import Support from '../pages/Support';
+import CreatePaymentLink from '../pages/Dashboard/components/CreatePaymentLink';
 
 const Adminroute = () => {
   return (
@@ -17,6 +18,7 @@ const Adminroute = () => {
       <Route path={DashboardPath.VIRTUAL_CARD} element={<VirtualCard />} />
       <Route path={DashboardPath.SETTINGS} element={<Settings />} />
       <Route path={DashboardPath.SUPPORT} element={<Support />} />
+      <Route path="/dashboard/create-payment" element={<CreatePaymentLink />} />
 
       <Route path="*" element={<Navigate to="/pageNotFound" replace />} />
     </Routes>

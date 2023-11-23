@@ -3,8 +3,13 @@ import SignupImage from '@assets/svg/signup.svg?react';
 import AuthLayout from '@components/Layout/AuthLayout';
 import Button from '@components/shared/Button';
 import ControlledInput from '@components/shared/Input/ControlledInput';
+import ModalBoxLayout from '@components/shared/ModalBoxLayout';
+import RenderIf from '@components/shared/RenderIf';
+import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 
 import { useForm } from 'react-hook-form';
+import { useAppDispatch, useAppSelector } from 'redux/hooks';
+import Verify from './components/Verify';
 
 const VerifyToken = () => {
   const { control, handleSubmit } = useForm({
@@ -12,6 +17,8 @@ const VerifyToken = () => {
       token: ['', '', '', ''],
     },
   });
+  const dispatch = useAppDispatch();
+  const { modalType, openModal } = useAppSelector(state => state.modal);
   // const[open, setOpen] = useState(false)
   // const handleClose = () => {
   //   setOpen(false)
@@ -22,7 +29,6 @@ const VerifyToken = () => {
     console.log(data);
     const payload = [...data.token];
     console.log(payload.join(''));
-   
   };
   return (
     <div className="w-full ">
@@ -62,8 +68,16 @@ const VerifyToken = () => {
                 Resend code in
               </p>
               <Button
-                className="rounded-[48px] p-[14px] bg-[#03045B] text-[#fff]  mt-8 w-full"
+                className="rounded-[48px] p-[14px] bg-primary text-[#fff]  mt-8 w-full"
                 type="submit"
+                onClick={() => {
+                  dispatch(
+                    setOpenModal({
+                      openModal: true,
+                      modalType: 'verify',
+                    }),
+                  );
+                }}
               >
                 Verify
               </Button>
@@ -71,10 +85,11 @@ const VerifyToken = () => {
           </AuthLayout>
         </div>
       </div>
-      {/* <Modal onClose={handleClose} open={open}>
-        chidren
-        <button>close</button>
-      </Modal> */}
+      <ModalBoxLayout openModalBox={openModal}>
+        <RenderIf condition={modalType === 'verify'}>
+          <Verify />
+        </RenderIf>
+      </ModalBoxLayout>
     </div>
   );
 };

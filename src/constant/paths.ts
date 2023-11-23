@@ -10,6 +10,7 @@ export const AuthPaths = {
   CREATE_PASSWORD_SUCCESS: 'create-password-success',
   SIGNUP: 'signup',
   VERIFY_TOKEN: 'verify-token',
+  VERIFY: 'verify',
 };
 
 export const DashboardPath = {
@@ -19,4 +20,8 @@ export const DashboardPath = {
   VIRTUAL_CARD: 'virtual-card',
   SETTINGS: 'settings',
   SUPPORT: 'support',
+};
+
+export const NestedDashboardPath = {
+  CREATE_PAYMENT: 'dashboard/create-payment',
 };
