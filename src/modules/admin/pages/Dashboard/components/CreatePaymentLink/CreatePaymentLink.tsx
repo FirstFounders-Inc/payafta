@@ -1,19 +1,19 @@
 import PageTabs from '@components/shared/PageTabs';
-import ItemForm from './ItemForm';
-import PaymentType from './PaymentType';
-import SellersInformationForm from './SellersInformationForm';
+
 import { useState } from 'react';
+import Buyer from './Buyer';
+import Seller from './Seller';
 
 const CreatePaymentLink = () => {
-   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-   const [_title, setTitle] = useState('All Terminals');
-  const terminalTabs = ['All Terminals', 'Assigned Terminals'];
+
+  const [title, setTitle] = useState('Buyer');
+  const terminalTabs = ['Buyer', 'Seller'];
   return (
     <div className="bg-[#fff] p-6 grid gap-y-4">
       <PageTabs tabsHeadsNames={terminalTabs} setCurrentTabName={setTitle} />
-      <SellersInformationForm />
-      <ItemForm />
-      <PaymentType />
+      {title === 'Buyer' && <Buyer/>}
+      {title === 'Seller' && <Seller />}
+     
     </div>
   );
 };

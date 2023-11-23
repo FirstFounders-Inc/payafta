@@ -7,7 +7,7 @@ const SellersInformationForm = () => {
   const { control } = useForm();
   return (
     <div>
-      <div className="flex gap-2 items-center">
+      <div className="grid grid-cols-2 gap-2 items-center">
         <ControlledSelect
           name="transaction_type"
           options={[
@@ -26,7 +26,7 @@ const SellersInformationForm = () => {
           control={control}
         />
       </div>
-      <div className="flex gap-2 items-center">
+      <div className="grid grid-cols-2 items-center">
         <ControlledInput
           name="seller_email"
           label="Seller’s Email Address "
