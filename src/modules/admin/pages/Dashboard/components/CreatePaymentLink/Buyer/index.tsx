@@ -2,7 +2,6 @@ import Button from '@components/shared/Button';
 import ItemForm from '../components/ItemForm';
 import PaymentType from '../components/PaymentType';
 
-
 import SellersInformationForm from './SellersInformationForm ';
 
 const Buyer = () => {
