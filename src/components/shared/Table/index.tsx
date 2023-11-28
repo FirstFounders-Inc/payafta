@@ -20,16 +20,18 @@ type ITableProps = {
   body: ITableBody[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onMenuClick?: (rowData: any) => void;
+  showView?: boolean;
+  
 };
 
-const Table = ({ heads, body }: ITableProps) => {
+const Table = ({ heads, body, showView}: ITableProps) => {
   return (
     <table className="w-full bg-[#fff]">
       <thead>
         {heads.map(({ label, accessor, align }) => {
           return (
             <th
-              className="bg-[#F8F8F8]  font-medium/"
+              className={`shadow-sm bg-[#F8F8F8] p-4 font-medium h-[48px] border-r-[1px] last:border-r-0`}
               align={align || 'left'}
               key={accessor}
             >
@@ -37,18 +39,27 @@ const Table = ({ heads, body }: ITableProps) => {
             </th>
           );
         })}
+        {showView && (
+          <th
+            className="shadow-sm bg-[#F8F8F8] p-4 font-medium h-[48px]"
+            
+          >
+            View
+          </th>
+        )}
       </thead>
       <tbody>
         {body.map((data, idx) => {
           return (
-            <tr key={idx}>
+            <tr key={idx} className="border-b-[1px] ">
               {heads.map(({ accessor, align, render }) => {
                 return (
-                  <td align={align || 'left'} key={accessor}>
+                  <td align={align || 'left'} key={accessor} className="p-4">
                     {render ? render(data[accessor], data) : data[accessor]}
                   </td>
                 );
               })}
+              {showView && <td className='text-center'>View</td>}
             </tr>
           );
         })}
