@@ -1,8 +1,7 @@
-import Table  from '@components/shared/Table';
-import {  paymentLinkData } from 'db/paymentLinks';
+import Table from '@components/shared/Table';
+import { paymentLinkData } from 'db/paymentLinks';
 import { ITableHead } from '@components/shared/Table';
 import { twMerge } from 'tailwind-merge';
-
 
 export const head: ITableHead[] = [
   {
@@ -17,12 +16,12 @@ export const head: ITableHead[] = [
   {
     accessor: 'type',
     label: 'Type',
-    align: 'center'
+    align: 'center',
   },
   {
     accessor: 'amount',
     label: 'Amount(₦)',
-    align:'center'
+    align: 'center',
   },
   {
     accessor: 'status',
@@ -39,8 +38,8 @@ export const head: ITableHead[] = [
             return 'bg-[#E6E7FE]  text-[#03045B] ';
           case 'closed':
             return 'bg-[#F2F2F2] text-[#333]';
-            case 'delivery':
-              return 'bg-[#E6E7FE] text-[#03045B]';
+          case 'delivery':
+            return 'bg-[#E6E7FE] text-[#03045B]';
           default:
             return 'text-red-400 bg-red-600';
         }
@@ -57,15 +56,12 @@ export const head: ITableHead[] = [
       );
     },
   },
-  
 ];
-
-
 
 const PaymentLinks = () => {
   return (
     <div>
-      <Table body={paymentLinkData} heads={head} showView/>
+      <Table body={paymentLinkData} heads={head} showView />
     </div>
   );
 };
