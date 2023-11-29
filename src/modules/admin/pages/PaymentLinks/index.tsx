@@ -2,6 +2,11 @@ import Table from '@components/shared/Table';
 import { paymentLinkData } from 'db/paymentLinks';
 import { ITableHead } from '@components/shared/Table';
 import { twMerge } from 'tailwind-merge';
+import PageHeader from '@components/shared/PageHeader';
+import CreatePaymentIcon from '@assets/icons/createPayment.svg?react';
+import SearchFilter from '@components/shared/SearchFilter';
+import ControlledSelect from '@components/shared/Select/ControlledSelect';
+import { useForm } from 'react-hook-form';
 
 export const head: ITableHead[] = [
   {
@@ -59,8 +64,41 @@ export const head: ITableHead[] = [
 ];
 
 const PaymentLinks = () => {
+  const { control } = useForm();
   return (
-    <div>
+    <div className="bg-[#fff] p-6 rounded-[8px]">
+      <PageHeader
+        bigText="Payment Link"
+        icon={<CreatePaymentIcon />}
+        smallText="Create Payment"
+        card
+        className="pt-8"
+      />
+      <div className="flex  justify-between items-center pb-4">
+        <div className="w-[45%] grid grid-flow-col gap-2">
+          <SearchFilter placeholder='Search'/>
+        </div>
+
+        <div className="flex gap-4 w-[39%]">
+          <div className="flex flex-grow">
+            <ControlledSelect
+              name="paymentType"
+            placeholder="Payment Type"
+              control={control}
+              options={[{ label: 'All', value: 'd' }]}
+            />
+          </div>
+          <div className="flex flex-grow">
+            <ControlledSelect
+              name="status"
+              placeholder="Status"
+              control={control}
+              options={[{ label: 'All', value: 'd' }]}
+            />
+          </div>
+        </div>
+      </div>
+
       <Table body={paymentLinkData} heads={head} showView />
     </div>
   );

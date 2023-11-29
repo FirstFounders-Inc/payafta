@@ -22,16 +22,9 @@ type ITableProps = {
   onMenuClick?: (rowData: any) => void;
   showView?: boolean;
   emptyStateImage?: ReactNode;
- 
 };
 
-const Table = ({
-  heads,
-  body,
-  showView,
-  emptyStateImage,
-  
-}: ITableProps) => {
+const Table = ({ heads, body, showView, emptyStateImage }: ITableProps) => {
   return (
     <>
       {body.length === 0 ? (
@@ -77,7 +70,7 @@ const Table = ({
               </th>
             )}
           </thead>
-          <tbody >
+          <tbody>
             {body.map((data, idx) => {
               return (
                 <tr key={idx} className="border-b-[1px] ">

@@ -1,6 +1,10 @@
 import Table, { ITableHead } from '@components/shared/Table';
 import { twMerge } from 'tailwind-merge';
 import TransactionEmptyImage from '@assets/icons/transactionEmptyState.svg?react';
+import PageHeader from '@components/shared/PageHeader';
+import ControlledSelect from '@components/shared/Select/ControlledSelect';
+import { useForm } from 'react-hook-form';
+import SearchFilter from '@components/shared/SearchFilter';
 
 const transactionData = [
   {
@@ -75,8 +79,23 @@ export const head: ITableHead[] = [
 ];
 
 const Transactions = () => {
+  const { control } = useForm();
   return (
-    <div>
+    <div className="bg-[#fff] p-6 pt-2">
+      <PageHeader bigText="Transaction History" />
+      <div className="flex justify-between items-center pb-4">
+        <div className="w-[45%] grid grid-flow-col gap-2">
+          <SearchFilter placeholder='Search by description'/>
+        </div>
+        <div className=" w-[25%]">
+          <ControlledSelect
+            control={control}
+            name="Transaction Type"
+            placeholder="Transaction Type"
+            options={[{ value: 'all', label: 'All' }]}
+          />
+        </div>
+      </div>
       <Table
         body={transactionData}
         heads={head}
