@@ -7,7 +7,7 @@ const PageHeader = ({
   icon,
   onClick,
   className,
-  card
+  card,
 }: IPageHeaderProps) => {
   return (
     <div className="flex justify-between py-6">

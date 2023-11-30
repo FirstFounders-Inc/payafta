@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 
-
 export type IPageHeaderProps = {
   bigText: string;
   icon?: ReactNode;

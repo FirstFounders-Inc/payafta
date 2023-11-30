@@ -16,16 +16,6 @@ const RecentTransactionsAndPayment = (props: IRecentTransactionsAndPayment) => {
           {link}
         </p>
       </div>
-      <div className="border rounded-[8px] shadow-sm">
-        <div className="flex justify-between">
-          <p>Full Name</p>
-          <p>10000</p>
-        </div>
-        <div className="flex justify-between">
-          <p>Full Name</p>
-          <p>10000</p>
-        </div>
-      </div>
     </div>
   );
 };

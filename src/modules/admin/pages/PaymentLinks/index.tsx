@@ -76,14 +76,14 @@ const PaymentLinks = () => {
       />
       <div className="flex  justify-between items-center pb-4">
         <div className="w-[45%] grid grid-flow-col gap-2">
-          <SearchFilter placeholder='Search'/>
+          <SearchFilter placeholder="Search" />
         </div>
 
         <div className="flex gap-4 w-[39%]">
           <div className="flex flex-grow">
             <ControlledSelect
               name="paymentType"
-            placeholder="Payment Type"
+              placeholder="Payment Type"
               control={control}
               options={[{ label: 'All', value: 'd' }]}
             />

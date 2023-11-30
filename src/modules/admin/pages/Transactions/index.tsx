@@ -85,7 +85,7 @@ const Transactions = () => {
       <PageHeader bigText="Transaction History" />
       <div className="flex justify-between items-center pb-4">
         <div className="w-[45%] grid grid-flow-col gap-2">
-          <SearchFilter placeholder='Search by description'/>
+          <SearchFilter placeholder="Search by description" />
         </div>
         <div className=" w-[25%]">
           <ControlledSelect
