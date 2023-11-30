@@ -7,13 +7,14 @@ export type IRecentPaymentOrTransactions = {
   smallText: string;
 
   amount: number;
-  status:
-    | 'agreement'
-    | 'payment'
-    | 'delivery'
-    | 'successful'
-    | 'closed'
-    | 'shipping';
+  status: string;
+  // status:
+  //   | 'agreement'
+  //   | 'payment'
+  //   | 'delivery'
+  //   | 'successful'
+  //   | 'closed'
+  //   | 'shipping';
 };
 function RecentPaymentOrTransactions(props: IRecentPaymentOrTransactions) {
   const { icon, text, smallText, status, amount } = props;
@@ -37,32 +38,30 @@ function RecentPaymentOrTransactions(props: IRecentPaymentOrTransactions) {
   })();
 
   return (
-    <div className=" border-b-[0.8px] last:border-b-0">
-      <div className="flex justify-between items-center  py-6">
-        <div className="flex gap-2">
-          {icon && <div>{icon}</div>}
-          <div>
-            <p className="text-[16px] leading-5 text-[#010101] font-medium py-[4px]">
-              {text}
-            </p>
-            <p className="text-[14px] leading-4 text-[#999] font-normal">
-              {smallText}
-            </p>
-          </div>
-        </div>
-        <div className="">
-          <p className="text-[16px] leading-5 text-[#010101] font-bold py-[4px]">
-            {amount}
+    <div className="flex justify-between items-center  py-6">
+      <div className="flex gap-2">
+        {icon && <div>{icon}</div>}
+        <div>
+          <p className="text-[16px] leading-5 text-[#010101] font-medium py-[4px]">
+            {text}
           </p>
-          <p
-            className={twMerge(
-              className,
-              'text-[14px] leading-4 rounded-[20px] px-[10px] capitalize font-normal',
-            )}
-          >
-            {status}
+          <p className="text-[14px] leading-4 text-[#999] font-normal">
+            {smallText}
           </p>
         </div>
+      </div>
+      <div className="">
+        <p className="text-[16px] pl-4 leading-5 text-[#010101] font-bold py-[4px]">
+          {amount}
+        </p>
+        <p
+          className={twMerge(
+            className,
+            'text-[14px] leading-4 rounded-[20px] px-[10px] capitalize font-normal',
+          )}
+        >
+          {status}
+        </p>
       </div>
     </div>
   );
