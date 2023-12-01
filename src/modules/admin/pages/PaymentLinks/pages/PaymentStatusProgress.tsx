@@ -2,7 +2,7 @@ import ArrowLeft from '@assets/icons/arrowLeft.svg?react';
 
 const PaymentStatusProgress = () => {
   return (
-    <div className="grid grid-cols-3 gap-2 ">
+    <div className="grid lg:grid-cols-3 gap-2 ">
       <div className="grid gap-y-4 col-span-2 bg-[#fff] p-4 rounded-[8px]">
         <div className="flex">
           <ArrowLeft />
@@ -16,9 +16,7 @@ const PaymentStatusProgress = () => {
         </div>
       </div>
       <div className=" bg-[#fff] p-4 rounded-[8px] grid gap-y-4">
-        <h3 className="text-[20px] leading-6 text-mainTextColor ">
-          Summary
-        </h3>
+        <h3 className="text-[20px] leading-6 text-mainTextColor ">Summary</h3>
         <div className="flex flex-col ">
           <p className="text-[14px] leading-4 text-[#666]">Name</p>
           <p className="text-[#1A1A1A] text-[16px] leading-5">Paul Simeon</p>
