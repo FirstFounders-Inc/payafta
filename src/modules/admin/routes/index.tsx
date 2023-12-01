@@ -8,6 +8,8 @@ import Settings from '../pages/Settings';
 import Support from '../pages/Support';
 import CreatePaymentLink from '../pages/Dashboard/components/CreatePaymentLink';
 
+import PaymentStatusProgress from '../pages/PaymentLinks/pages/PaymentStatusProgress';
+
 const Adminroute = () => {
   return (
     <Routes>
@@ -19,6 +21,8 @@ const Adminroute = () => {
       <Route path={DashboardPath.SETTINGS} element={<Settings />} />
       <Route path={DashboardPath.SUPPORT} element={<Support />} />
       <Route path="/dashboard/create-payment" element={<CreatePaymentLink />} />
+
+      <Route path="/payment-links/status" element={<PaymentStatusProgress />} />
 
       <Route path="*" element={<Navigate to="/pageNotFound" replace />} />
     </Routes>

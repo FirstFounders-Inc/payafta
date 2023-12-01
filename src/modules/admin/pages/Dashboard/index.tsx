@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import DashboardModal from './components/Modal/DashboardModal';
 import RecentPaymentOrTransactions from './components/RecentPaymentOrTransactions';
 import { recentPaymentLink, recentTransactions } from 'db/dashboard';
-import WithdrawalIcon from '@assets/icons/linkPyamentIcon.svg?react'
+import WithdrawalIcon from '@assets/icons/linkPyamentIcon.svg?react';
 
 const Dashboard = () => {
   const dispatch = useAppDispatch();
@@ -125,7 +125,7 @@ const Dashboard = () => {
                   status={el.status}
                   text={el.type}
                   smallText={el.date}
-                  icon={<WithdrawalIcon/>}
+                  icon={<WithdrawalIcon />}
                 />
               </div>
             );

@@ -48,7 +48,7 @@ export const recentPaymentLink = [
     status: 'shipping',
     amount: 335000,
   },
-]
+];
 
 export const recentTransactions = [
   {
