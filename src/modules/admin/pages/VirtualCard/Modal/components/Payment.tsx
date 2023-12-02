@@ -1,14 +1,13 @@
+import { IVirtualCardProps } from '@interfaces/virtualCard.interface';
+import BackArrow from '@assets/icons/backArrow.svg?react';
+import { virtualCardPayment } from 'db/virtualCard';
 import Button from '@components/shared/Button';
 
-import BackArrow from '@assets/icons/backArrow.svg?react';
-import { confirmPayment } from 'db/dashboard';
-import { IWithdrawalProps } from '@interfaces/dashboard.interface';
-
-const ConfirmPayment = ({
+const Payment = ({
   currentStep,
   setCurrentStep,
   handleNext,
-}: IWithdrawalProps) => {
+}: IVirtualCardProps) => {
   return (
     <div>
       <div className="flex ">
@@ -17,14 +16,12 @@ const ConfirmPayment = ({
           onClick={() => setCurrentStep(currentStep - 1)}
         />
 
-        <h3 className="font-[600] text-[18px] lg:text-[24px] leading-[30px] ml-14">
-          Confirm Payment
-        </h3>
+        <h3 className="font-[600] text-[24px] leading-[30px] ml-20">Payment</h3>
       </div>
-      <p className="text-subTextColor text-[16px] leading-[20px] pt-2">
+      <p className="text-subTextColor  text-[14px] lg:text-[16px] leading-[20px] pt-2">
         Verify the details below before completing the payment.
       </p>
-      {confirmPayment.map((el, idx) => {
+      {virtualCardPayment.map((el, idx) => {
         return (
           <div key={idx} className="flex justify-between py-4">
             <p className="text-[#666] leading-[20px] text-[16px] font-[500]">
@@ -48,4 +45,4 @@ const ConfirmPayment = ({
   );
 };
 
-export default ConfirmPayment;
+export default Payment;

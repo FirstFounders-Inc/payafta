@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import { IButtonProps } from './interface';
 import { Button as MUIButton } from '@mui/material';
 
@@ -10,7 +11,15 @@ const Button = ({
   ...rest
 }: IButtonProps) => {
   return (
-    <MUIButton variant={variant} className={className} {...rest} color={color}>
+    <MUIButton
+      variant={variant}
+      className={twMerge(
+        className,
+        '!border capitalize font-[500] text-[16px] leading-5 hover:bg-[#383bf1]',
+      )}
+      {...rest}
+      color={color}
+    >
       {loading ? <p>Loading....</p> : children}
     </MUIButton>
   );

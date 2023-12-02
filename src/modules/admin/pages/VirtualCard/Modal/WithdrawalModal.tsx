@@ -1,22 +1,19 @@
+import { IStepProps } from '@interfaces/virtualCard.interface';
+import Withdrawal from './components/withdrawal/Withdrawal';
+import WithdrawalSuccessModal from './components/withdrawal/WithdrawalSuccessModal';
+import WithdrawalTransactionPin from './components/withdrawal/WithdrawalTransactionPin';
 import { useState } from 'react';
-import Withdrawal from './components/Withdrawal';
-import TransactionPin from './components/TransactionPin';
-import WithdrawalSuccess from './components/WithdrawalSuccess';
-import ConfirmPayment from './components/ConfirmPayment';
-
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
-import { IStepProps } from '@interfaces/dashboard.interface';
 
-const WithdrawFundModal = () => {
+const WithdrawalModal = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const dispatch = useAppDispatch();
-
   const handleNext = () => {
     if (currentStep < Object.keys(steps).length) {
       setCurrentStep(currentStep + 1);
     }
-    if (currentStep === 4) {
+    if (currentStep === 3) {
       dispatch(
         setOpenModal({
           openModal: false,
@@ -28,20 +25,13 @@ const WithdrawFundModal = () => {
   const steps: IStepProps = {
     1: <Withdrawal handleNext={handleNext} />,
     2: (
-      <ConfirmPayment
+      <WithdrawalTransactionPin
         currentStep={currentStep}
         handleNext={handleNext}
         setCurrentStep={setCurrentStep}
       />
     ),
-    3: (
-      <TransactionPin
-        currentStep={currentStep}
-        handleNext={handleNext}
-        setCurrentStep={setCurrentStep}
-      />
-    ),
-    4: <WithdrawalSuccess handleNext={handleNext} />,
+    3: <WithdrawalSuccessModal handleNext={handleNext} />,
   };
 
   return (
@@ -51,4 +41,4 @@ const WithdrawFundModal = () => {
   );
 };
 
-export default WithdrawFundModal;
+export default WithdrawalModal;

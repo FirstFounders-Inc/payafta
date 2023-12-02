@@ -1,12 +1,12 @@
 import Button from '@components/shared/Button';
 import SuccessIcon from '@assets/icons/successIcon.svg?react';
-import { IWithdrawal } from './Withdrawal';
+import { IWithdrawal } from '@interfaces/dashboard.interface';
 
 const WithdrawalSuccess = ({ handleNext }: IWithdrawal) => {
   return (
     <div className="flex flex-col items-center justify-center ">
       <SuccessIcon />
-      <h3 className="text-[24px] py-4 leading-[30px] font-[600]  text-mainTextColor">
+      <h3 className=" text-[18px] lg:text-[24px] py-4 leading-[30px] font-[600]  text-mainTextColor">
         Withdrawal Successful
       </h3>
       <p className="text-[14px] leading-[20px] text-subTextColor ">

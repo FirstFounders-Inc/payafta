@@ -1,15 +1,14 @@
 import Button from '@components/shared/Button';
-
-import BackArrow from '@assets/icons/backArrow.svg?react';
 import ControlledInput from '@components/shared/Input/ControlledInput';
+import { IVirtualCardProps } from '@interfaces/virtualCard.interface';
 import { useForm } from 'react-hook-form';
-import { IWithdrawalProps } from '@interfaces/dashboard.interface';
+import BackArrow from '@assets/icons/backArrow.svg?react';
 
-const TransactionPin = ({
+const WithdrawalTransactionPin = ({
   currentStep,
   setCurrentStep,
   handleNext,
-}: IWithdrawalProps) => {
+}: IVirtualCardProps) => {
   const { control } = useForm();
   return (
     <div>
@@ -55,4 +54,4 @@ const TransactionPin = ({
   );
 };
 
-export default TransactionPin;
+export default WithdrawalTransactionPin;
