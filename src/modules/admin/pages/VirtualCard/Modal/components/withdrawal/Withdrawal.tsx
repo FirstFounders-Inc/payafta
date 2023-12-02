@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import { useAppDispatch } from 'redux/hooks';
 import CloseIcon from '@assets/icons/closeIcon.svg?react';
 
-
 const Withdrawal = ({ handleNext }: ICreateCard) => {
   const dispatch = useAppDispatch();
   const { control } = useForm();
@@ -48,4 +47,4 @@ const Withdrawal = ({ handleNext }: ICreateCard) => {
   );
 };
 
-export default Withdrawal
+export default Withdrawal;

@@ -1,10 +1,8 @@
-import { ICreateCard } from '@interfaces/virtualCard.interface'
+import { ICreateCard } from '@interfaces/virtualCard.interface';
 import SuccessIcon from '@assets/icons/successIcon.svg?react';
 import Button from '@components/shared/Button';
 
-
-
-const WithdrawalSuccessModal = ({handleNext}: ICreateCard) => {
+const WithdrawalSuccessModal = ({ handleNext }: ICreateCard) => {
   return (
     <div className="flex flex-col items-center justify-center ">
       <SuccessIcon />
@@ -14,7 +12,7 @@ const WithdrawalSuccessModal = ({handleNext}: ICreateCard) => {
       <p className="text-[14px] leading-[20px] text-subTextColor py-4">
         Fund now available on your wallet balance.
       </p>
-     
+
       <Button
         className="bg-[#1A1A1A] rounded-[48px] shadow-sm px-12 py-2"
         onClick={handleNext}
@@ -23,6 +21,6 @@ const WithdrawalSuccessModal = ({handleNext}: ICreateCard) => {
       </Button>
     </div>
   );
-}
+};
 
-export default WithdrawalSuccessModal
+export default WithdrawalSuccessModal;

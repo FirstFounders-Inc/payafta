@@ -6,22 +6,21 @@ import { useState } from 'react';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 
-
 const WithdrawalModal = () => {
   const [currentStep, setCurrentStep] = useState(1);
- const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
   const handleNext = () => {
     if (currentStep < Object.keys(steps).length) {
       setCurrentStep(currentStep + 1);
     }
-     if (currentStep === 3) {
-       dispatch(
-         setOpenModal({
-           openModal: false,
-           modalType: '',
-         }),
-       );
-     }
+    if (currentStep === 3) {
+      dispatch(
+        setOpenModal({
+          openModal: false,
+          modalType: '',
+        }),
+      );
+    }
   };
   const steps: IStepProps = {
     1: <Withdrawal handleNext={handleNext} />,
@@ -40,6 +39,6 @@ const WithdrawalModal = () => {
       {steps[currentStep]}
     </div>
   );
-}
+};
 
-export default WithdrawalModal
+export default WithdrawalModal;

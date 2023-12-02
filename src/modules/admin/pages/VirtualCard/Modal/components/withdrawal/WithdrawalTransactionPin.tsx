@@ -4,7 +4,6 @@ import { IVirtualCardProps } from '@interfaces/virtualCard.interface';
 import { useForm } from 'react-hook-form';
 import BackArrow from '@assets/icons/backArrow.svg?react';
 
-
 const WithdrawalTransactionPin = ({
   currentStep,
   setCurrentStep,
@@ -55,4 +54,4 @@ const WithdrawalTransactionPin = ({
   );
 };
 
-export default WithdrawalTransactionPin
+export default WithdrawalTransactionPin;

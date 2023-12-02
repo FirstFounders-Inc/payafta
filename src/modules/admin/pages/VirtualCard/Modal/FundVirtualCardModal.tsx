@@ -4,7 +4,7 @@ import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 
 const FundVirtualCardModal = () => {
-    const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
   return (
     <div className="md:w-[500px] bg-colorWhite rounded-[8px] p-6 text-mainTextColor grid gap-y-4">
       <div className="flex justify-between">

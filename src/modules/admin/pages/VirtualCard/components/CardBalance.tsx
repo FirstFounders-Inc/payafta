@@ -3,9 +3,8 @@ import { virtualCardPayment } from 'db/virtualCard';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 
-
 const CardBalance = () => {
-     const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
   return (
     <>
       <div className="flex flex-col items-center justify-center pt-4">
@@ -56,6 +55,6 @@ const CardBalance = () => {
       </div>
     </>
   );
-}
+};
 
-export default CardBalance
+export default CardBalance;
