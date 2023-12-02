@@ -6,14 +6,10 @@ import ConfirmPayment from './components/ConfirmPayment';
 
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
+import { IStepProps } from '@interfaces/dashboard.interface';
 
-type Props = Record<number, React.ReactNode>;
 
-export type IWithdrawalProps = {
-  currentStep: number;
-  handleNext: () => void;
-  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
-};
+
 
 const WithdrawFundModal = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -32,7 +28,7 @@ const WithdrawFundModal = () => {
       );
     }
   };
-  const steps: Props = {
+  const steps: IStepProps = {
     1: <Withdrawal handleNext={handleNext} />,
     2: (
       <ConfirmPayment
