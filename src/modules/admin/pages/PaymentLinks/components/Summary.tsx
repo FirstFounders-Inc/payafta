@@ -1,5 +1,3 @@
-
-
 const Summary = () => {
   return (
     <>
@@ -64,6 +62,6 @@ const Summary = () => {
       </div>
     </>
   );
-}
+};
 
-export default Summary
+export default Summary;

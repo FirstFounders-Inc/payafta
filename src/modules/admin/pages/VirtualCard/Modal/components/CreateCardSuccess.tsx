@@ -4,17 +4,16 @@ import { IVirtualCardModalProps } from '@interfaces/virtualCard.interface';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 
-
 const CreateCardSuccess = ({ setCreateCard }: IVirtualCardModalProps) => {
-   const dispatch = useAppDispatch();
-    const closeModal = () => {
+  const dispatch = useAppDispatch();
+  const closeModal = () => {
     dispatch(
-        setOpenModal({
-          openModal: false,
-          modalType: '',
-        }),
-      );
-      setCreateCard(true)
+      setOpenModal({
+        openModal: false,
+        modalType: '',
+      }),
+    );
+    setCreateCard(true);
   };
   return (
     <div className="flex flex-col items-center justify-center ">

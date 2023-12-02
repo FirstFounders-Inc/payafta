@@ -6,7 +6,6 @@ export type IWithdrawalProps = {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 };
 
-
 export type IWithdrawal = {
   handleNext: () => void;
 };

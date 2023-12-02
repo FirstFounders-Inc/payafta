@@ -7,7 +7,6 @@ import { useForm } from 'react-hook-form';
 import ControlledInput from '@components/shared/Input/ControlledInput';
 import { IWithdrawal } from '@interfaces/dashboard.interface';
 
-
 const Withdrawal = ({ handleNext }: IWithdrawal) => {
   const dispatch = useAppDispatch();
   const { control } = useForm();

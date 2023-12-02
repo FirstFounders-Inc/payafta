@@ -1,10 +1,11 @@
 import Button from '@components/shared/Button';
 import ControlledInput from '@components/shared/Input/ControlledInput';
-import BackArrow from '@assets/icons/backArrow.svg?react';
 import { IVirtualCardProps } from '@interfaces/virtualCard.interface';
 import { useForm } from 'react-hook-form';
+import BackArrow from '@assets/icons/backArrow.svg?react';
 
-const CreateCardTransactionPin = ({
+
+const WithdrawalTransactionPin = ({
   currentStep,
   setCurrentStep,
   handleNext,
@@ -54,4 +55,4 @@ const CreateCardTransactionPin = ({
   );
 };
 
-export default CreateCardTransactionPin;
+export default WithdrawalTransactionPin

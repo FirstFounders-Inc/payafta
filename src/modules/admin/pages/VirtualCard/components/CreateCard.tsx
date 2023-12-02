@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import VirtualCardEmptyState from '@assets/icons/virtualCardEmptyState.svg?react'
+import VirtualCardEmptyState from '@assets/icons/virtualCardEmptyState.svg?react';
 import Button from '@components/shared/Button';
 import { useAppDispatch } from 'redux/hooks';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import VirtualCardModal from '../Modal/VirtualCardModal';
+import CardBalance from './CardBalance';
 
 const CreateCard = () => {
   const [createCard, setCreateCard] = useState(false);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   return (
     <div>
       {createCard === false && (
@@ -29,9 +30,7 @@ const CreateCard = () => {
           </Button>
         </div>
       )}
-      <div>
-        {createCard && <p>hi</p>}
-      </div>
+      <div>{createCard && <CardBalance/>}</div>
       <VirtualCardModal setCreateCard={setCreateCard} />
     </div>
   );

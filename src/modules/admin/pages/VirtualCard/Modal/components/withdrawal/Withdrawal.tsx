@@ -1,12 +1,13 @@
 import Button from '@components/shared/Button';
 import ControlledInput from '@components/shared/Input/ControlledInput';
+import { ICreateCard } from '@interfaces/virtualCard.interface';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useForm } from 'react-hook-form';
 import { useAppDispatch } from 'redux/hooks';
 import CloseIcon from '@assets/icons/closeIcon.svg?react';
-import { ICreateCard } from '@interfaces/virtualCard.interface';
 
-const CreateVirtualCard = ({ handleNext }: ICreateCard) => {
+
+const Withdrawal = ({ handleNext }: ICreateCard) => {
   const dispatch = useAppDispatch();
   const { control } = useForm();
   return (
@@ -35,7 +36,7 @@ const CreateVirtualCard = ({ handleNext }: ICreateCard) => {
           control={control}
           asteric
         />
-        <p className="text-[12px] leading-[15px]">Available Balance: </p>
+        <p className="text-[12px] leading-[15px]">Card Balance: </p>
       </form>
       <Button
         className="bg-primary rounded-[48px] shadow-sm py-[10px] mx-12"
@@ -47,4 +48,4 @@ const CreateVirtualCard = ({ handleNext }: ICreateCard) => {
   );
 };
 
-export default CreateVirtualCard;
+export default Withdrawal

@@ -17,7 +17,7 @@ const PaymentStatusProgress = () => {
         </div>
       </div>
       <div className=" bg-[#fff] p-4 rounded-[8px] grid gap-y-4">
-        <Summary/>
+        <Summary />
       </div>
     </div>
   );

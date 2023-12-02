@@ -3,8 +3,6 @@ import BackArrow from '@assets/icons/backArrow.svg?react';
 import { virtualCardPayment } from 'db/virtualCard';
 import Button from '@components/shared/Button';
 
-
-
 const Payment = ({
   currentStep,
   setCurrentStep,
@@ -47,4 +45,4 @@ const Payment = ({
   );
 };
 
-export default Payment
+export default Payment;

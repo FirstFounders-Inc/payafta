@@ -11,5 +11,4 @@ export const virtualCardPayment = [
     title: 'Total',
     name: '21xxxxxx37',
   },
-  
 ];

@@ -2,7 +2,6 @@ import Button from '@components/shared/Button';
 import SuccessIcon from '@assets/icons/successIcon.svg?react';
 import { IWithdrawal } from '@interfaces/dashboard.interface';
 
-
 const WithdrawalSuccess = ({ handleNext }: IWithdrawal) => {
   return (
     <div className="flex flex-col items-center justify-center ">

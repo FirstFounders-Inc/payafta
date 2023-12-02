@@ -8,9 +8,6 @@ import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useAppDispatch } from 'redux/hooks';
 import { IStepProps } from '@interfaces/dashboard.interface';
 
-
-
-
 const WithdrawFundModal = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const dispatch = useAppDispatch();
