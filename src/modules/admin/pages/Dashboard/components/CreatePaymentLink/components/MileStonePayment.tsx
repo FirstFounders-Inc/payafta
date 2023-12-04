@@ -16,7 +16,7 @@ const MileStonePayment = () => {
         placeholder="Description"
         control={control}
       />
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid lg:grid-cols-2 gap-2">
         <Date name="deliver_date" control={control} />
         <ControlledInput name="amount" placeholder="₦0.00" control={control} />
       </div>

@@ -30,7 +30,7 @@ const transactionData = [
   },
 ];
 
- const head: ITableHead[] = [
+const head: ITableHead[] = [
   {
     accessor: 'date',
     label: ' Date',
