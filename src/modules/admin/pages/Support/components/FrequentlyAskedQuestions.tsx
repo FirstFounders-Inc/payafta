@@ -10,7 +10,7 @@ const FrequentlyAskedQuestions = () => {
   }
   return (
     <div className="flex flex-col items-center justify-center pt-14">
-      <h3 className="text-[24px] leading-7 text-mainTextColor">
+      <h3 className=" text-[18px] leading-5 lg:text-[24px] lg:leading-7 text-mainTextColor py-4">
         Frequently Asked Questions
       </h3>
       <div className="lg:w-[860px] lg:ml-16 text-[#282525]">
@@ -26,12 +26,10 @@ const FrequentlyAskedQuestions = () => {
                   className="cursor-pointer"
                 />
               ) : (
-               
-                  <DownAccordion
-                    className="cursor-pointer"
-                    onClick={() => toggleAccordion(id)}
-                  />
-               
+                <DownAccordion
+                  className="cursor-pointer"
+                  onClick={() => toggleAccordion(id)}
+                />
               )}
             </div>
             {accordionOpen === id && (

@@ -81,13 +81,13 @@ const VirtualCard = () => {
       <PageHeader bigText="Virtual Card" />
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="bg-red-500 h-[150px]">a</div>
-        <div className=" col-span-2 rounded-[16px] border-[2px] border-[#f2f2f2] p-2  h-[466px]">
+        <div className=" lg:col-span-2 rounded-[16px] border-[2px] border-[#f2f2f2] p-2  h-[466px]">
           <CreateCard />
         </div>
       </div>
-    
-      <h3 className=" py-8 text-[20px] leading-[25px] font-semibold text-mainTextColor"
-        >Transaction History
+
+      <h3 className=" py-8 text-[20px] leading-[25px] font-semibold text-mainTextColor">
+        Transaction History
       </h3>
       <Table
         body={transactionData}

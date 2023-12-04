@@ -6,12 +6,10 @@ import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import VirtualCardModal from '../Modal/VirtualCardModal';
 import CardBalance from './CardBalance';
 
-
 const CreateCard = () => {
   const [createCard, setCreateCard] = useState(false);
   const dispatch = useAppDispatch();
 
-  
   return (
     <div>
       {createCard === false && (
@@ -34,7 +32,7 @@ const CreateCard = () => {
         </div>
       )}
       <div>{createCard && <CardBalance />}</div>
-      
+
       <VirtualCardModal setCreateCard={setCreateCard} />
     </div>
   );
