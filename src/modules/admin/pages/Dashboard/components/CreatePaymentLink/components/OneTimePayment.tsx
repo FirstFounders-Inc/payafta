@@ -8,7 +8,7 @@ const OneTimePayment = () => {
   const { control } = useForm();
   return (
     <div className="pt-4">
-      <div className="w-1/2 pb-4">
+      <div className="lg:w-1/2 pb-4">
         <Date
           name="date"
           control={control}

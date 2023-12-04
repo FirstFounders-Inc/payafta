@@ -24,7 +24,7 @@ const PageTabs = ({
   return (
     <div
       className={twMerge(
-        'rounded-[40px]  px-2 grid grid-cols-2 gap-10 items-center w-[700px]  bg-[#F8F8F8]',
+        'rounded-[40px]  px-2 grid grid-cols-2 gap-10 items-center lg:w-[700px]  bg-[#F8F8F8]',
         className,
       )}
     >

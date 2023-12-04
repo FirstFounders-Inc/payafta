@@ -13,7 +13,7 @@ const InputPhoneNumber = ({
   helperText,
 }: IInputPhoneNumberProps) => {
   return (
-    <div className="w-full max-w-full overflow-hidden flex flex-col p-2">
+    <div className="w-full max-w-full overflow-hidden flex flex-col ">
       {label && asteric ? (
         <div className="flex items-center">
           <label>{label}</label>

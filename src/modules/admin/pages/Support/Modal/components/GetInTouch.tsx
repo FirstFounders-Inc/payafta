@@ -6,7 +6,7 @@ import { useAppDispatch } from 'redux/hooks';
 
 const GetInTouch = () => {
   const { control } = useForm();
- const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
   return (
     <div className="w-[600px] bg-[#fff] rounded-[8px] p-4 grid gap-y-2">
       <h3 className="text-[24px] leading-7 font-semibold text-[#1A1A1A]">
