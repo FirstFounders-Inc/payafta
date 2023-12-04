@@ -7,7 +7,7 @@ const BuyersInformationForm = () => {
   const { control } = useForm();
   return (
     <div className="pt-6">
-      <div className="grid grid-cols-2 gap-2 items-center">
+      <div className="grid lg:grid-cols-2 gap-2 items-center">
         <ControlledSelect
           name="transaction_type"
           options={[
@@ -26,7 +26,7 @@ const BuyersInformationForm = () => {
           control={control}
         />
       </div>
-      <div className="grid grid-cols-2 items-center">
+      <div className="grid lg:grid-cols-2 items-center">
         <ControlledInput
           name="buyer_email"
           label="Buyer’s Email Address "
