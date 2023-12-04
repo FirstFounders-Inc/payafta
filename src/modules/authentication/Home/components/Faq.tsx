@@ -1,5 +1,5 @@
-import upAccordion from '@assets/icons/upArrow.svg';
-import downAccordion from '@assets/icons/downArrow.svg';
+import UpAccordion from '@assets/icons/upArrow.svg?react';
+import DownAccordion from '@assets/icons/downArrow.svg?react';
 import { faqQuestions } from 'db/home';
 import { useState } from 'react';
 
@@ -30,23 +30,19 @@ const Faq = () => {
           {faqQuestions?.map(({ id, ques, answer, list }) => (
             <div key={id} className="border border-[#F2F2F2] p-[20px]">
               <div className="flex justify-between items-center  ">
-                <h1 className=" text-[18px] lg:text-[20px] leading-[25px] font-[500]">
+                <h1 className=" text-[14px] lg:text-[16px] leading-[20px] font-[500]">
                   {ques}
                 </h1>
                 {accordionOpen === id ? (
-                  <div
-                    className="cursor-pointer"
+                  <UpAccordion
                     onClick={() => toggleAccordion(id)}
-                  >
-                    <img src={upAccordion} alt="An accordion" />
-                  </div>
+                    className="cursor-pointer"
+                  />
                 ) : (
-                  <div
+                  <DownAccordion
                     className="cursor-pointer"
                     onClick={() => toggleAccordion(id)}
-                  >
-                    <img src={downAccordion} alt="An accordion" />
-                  </div>
+                  />
                 )}
               </div>
               {accordionOpen === id && (
