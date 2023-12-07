@@ -17,7 +17,7 @@ const CreateCard = () => {
           <VirtualCardEmptyState className="mb-6" />
 
           <Button
-            className="bg-primary rounded-[48px] text-[#fff] w-full md:w-[320px] py-2"
+            className="bg-primary rounded-[48px] text-[#fff] w-full lg:w-[320px] py-2"
             onClick={() => {
               dispatch(
                 setOpenModal({

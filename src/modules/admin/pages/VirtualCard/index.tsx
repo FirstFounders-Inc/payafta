@@ -3,6 +3,7 @@ import CreateCard from './components/CreateCard';
 import Table, { ITableHead } from '@components/shared/Table';
 import TransactionEmptyImage from '@assets/icons/transactionEmptyState.svg?react';
 import { twMerge } from 'tailwind-merge';
+import PayaftaVirtualCard from './components/PayaftaVirtualCard';
 
 const VirtualCard = () => {
   const transactionData = [
@@ -79,8 +80,10 @@ const VirtualCard = () => {
   return (
     <div className="bg-[#fff] p-6 rounded-[8px]">
       <PageHeader bigText="Virtual Card" />
-      <div className="grid lg:grid-cols-3 gap-6">
-        <div className="bg-red-500 h-[150px]">a</div>
+      <div className=" mt-6 grid  md:grid-cols-2 lg:grid-cols-3 lg:gap-6 gap-14">
+        <div className=" w-full h-[190px]">
+          <PayaftaVirtualCard />
+        </div>
         <div className=" lg:col-span-2 rounded-[16px] border-[2px] border-[#f2f2f2] p-2  h-[466px]">
           <CreateCard />
         </div>
