@@ -42,7 +42,7 @@ const Table = ({ heads, body, showView, emptyStateImage }: ITableProps) => {
               );
             })}
             {showView && (
-              <p className="shadow-sm bg-[#F8F8F8] p-4 font-medium h-[48px]">
+              <p className="hidden lg:table-cell shadow-sm bg-[#F8F8F8] p-4 font-medium h-[48px]">
                 View
               </p>
             )}
@@ -72,7 +72,7 @@ const Table = ({ heads, body, showView, emptyStateImage }: ITableProps) => {
               },
             )}
             {showView && (
-              <th className="shadow-sm bg-[#F8F8F8] p-4 font-medium h-[48px]">
+              <th className="hidden lg:table-cell shadow-sm bg-[#F8F8F8] p-4 font-medium h-[48px]">
                 View
               </th>
             )}
@@ -92,7 +92,7 @@ const Table = ({ heads, body, showView, emptyStateImage }: ITableProps) => {
                       </td>
                     );
                   })}
-                  {showView && <td className="text-center">View</td>}
+                  {showView && <td className="hidden lg:table-cell text-center">View</td>}
                 </tr>
               );
             })}

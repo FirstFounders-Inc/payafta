@@ -35,7 +35,7 @@ const head: ITableHead[] = [
     accessor: 'date',
     label: ' Date',
     render: (date: string) => date,
-     columnClassName: 'hidden lg:table-cell',
+    columnClassName: 'hidden lg:table-cell',
   },
   {
     accessor: 'name',
@@ -55,7 +55,7 @@ const head: ITableHead[] = [
   {
     accessor: 'status',
     label: 'Status',
-     columnClassName: 'hidden lg:table-cell',
+    columnClassName: 'hidden lg:table-cell',
 
     render: (status: string) => {
       const className = (() => {
