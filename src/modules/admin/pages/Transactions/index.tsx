@@ -4,7 +4,7 @@ import TransactionEmptyImage from '@assets/icons/transactionEmptyState.svg?react
 import PageHeader from '@components/shared/PageHeader';
 import ControlledSelect from '@components/shared/Select/ControlledSelect';
 import { useForm } from 'react-hook-form';
-import SearchFilter from '@components/shared/SearchFilter';
+
 
 const transactionData = [
   {
@@ -85,12 +85,9 @@ const Transactions = () => {
   const { control } = useForm();
   return (
     <div className="bg-[#fff] p-6 pt-2">
-      <PageHeader bigText="Transaction History" />
-      <div className="flex justify-between items-center pb-4">
-        <div className="w-[45%] grid grid-flow-col gap-2">
-          <SearchFilter placeholder="Search by description" />
-        </div>
-        <div className=" w-[25%]">
+      <div className="lg:flex justify-between items-center  pb-4 pt-6">
+        <PageHeader bigText="Transaction History" />
+        <div className=" mt-4 lg:mt-0 lg:w-[25%] ">
           <ControlledSelect
             control={control}
             name="Transaction Type"

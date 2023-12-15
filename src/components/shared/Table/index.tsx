@@ -92,7 +92,9 @@ const Table = ({ heads, body, showView, emptyStateImage }: ITableProps) => {
                       </td>
                     );
                   })}
-                  {showView && <td className="hidden lg:table-cell text-center">View</td>}
+                  {showView && (
+                    <td className="hidden lg:table-cell text-center">View</td>
+                  )}
                 </tr>
               );
             })}

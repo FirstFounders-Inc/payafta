@@ -34,7 +34,7 @@ export const head: ITableHead[] = [
   {
     accessor: 'status',
     label: 'Status',
-    align:'center',
+    align: 'center',
 
     render: (status: string) => {
       const className = (() => {
