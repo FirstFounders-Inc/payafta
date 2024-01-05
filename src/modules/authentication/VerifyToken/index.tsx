@@ -2,7 +2,7 @@ import SignupImage from '@assets/svg/signup.svg?react';
 
 import AuthLayout from '@components/Layout/AuthLayout';
 import Button from '@components/shared/Button';
-import ControlledInput from '@components/shared/Input/ControlledInput';
+
 import ModalBoxLayout from '@components/shared/ModalBoxLayout';
 import RenderIf from '@components/shared/RenderIf';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
@@ -10,6 +10,8 @@ import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useForm } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import Verify from './components/Verify';
+
+import TokenInput from '@components/shared/TokenInput';
 
 const VerifyToken = () => {
   const { control, handleSubmit } = useForm({
@@ -30,6 +32,25 @@ const VerifyToken = () => {
     const payload = [...data.token];
     console.log(payload.join(''));
   };
+
+  // const otpRefs = Array.from({ length: 4 }, () =>
+  //   React.createRef<HTMLInputElement>(),
+  // );
+
+  // const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  //   console.log(e.key);
+  //   const target = e.target as HTMLInputElement;
+  //   console.log(target.value)
+  //   if (e.key !== 'Backspace' || target.value !== '') {
+  //     return;
+  //   }
+  //   const previousElementSibling =
+  //     target.previousElementSibling as HTMLInputElement ;
+
+  //   if (previousElementSibling) {
+  //     previousElementSibling.focus()
+  //   }
+  // };
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full md:items-center md:justify-center">
@@ -45,25 +66,28 @@ const VerifyToken = () => {
               Enter Verification Code{' '}
             </p>
             <form onSubmit={handleSubmit(onForm)}>
-              <div className="flex w-full max-w-[360px] gap-[10px]">
+              {/* <div className="flex w-full max-w-[360px] gap-[10px]">
                 {Array.from({ length: 4 }).map((_digit, idx) => (
                   <ControlledInput
                     key={idx}
                     type="text"
-                    name={`token.${idx}`}
+                    name={`token.${idx + 1}`}
+                    // ref={(ref) => console.log(ref)}
+                    ref={otpRefs[idx]}
                     inputMode="numeric"
                     autoComplete="one-time-code"
                     control={control}
+                    onKeyDown={handleKeyDown}
                     //   pattern="\d{1}"
-
-                    // maxLength={valueLength}
+                    maxlength={1}
                     // value={digit}
 
                     className="w-full h-[40px] border-[1px] rounded-[5px] text-center font-bold text-[32px] leading-3"
                     //   {...register(`token.${idx}`)}
                   />
                 ))}
-              </div>
+              </div> */}
+              <TokenInput control={control} name="token" />
               <p className="text-[12px] leading-4 text-[#4D4D4D] text-center pt-2">
                 Resend code in
               </p>

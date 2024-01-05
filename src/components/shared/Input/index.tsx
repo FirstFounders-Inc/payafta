@@ -4,7 +4,9 @@ import { twMerge } from 'tailwind-merge';
 import FieldHelperText from '../FieldHelperText';
 import Asteric from '@assets/icons/Label.svg?react';
 
-const Input = (props: IInputProps) => {
+const Input = (
+  props: IInputProps
+) => {
   const {
     label,
 
@@ -15,6 +17,8 @@ const Input = (props: IInputProps) => {
     className,
     startAdornment,
     endAdornment,
+    maxlength,
+    // inputRef,
     ...rest
   } = props;
   return (
@@ -50,10 +54,17 @@ const Input = (props: IInputProps) => {
             </InputAdornment>
           ) : null
         }
+        inputProps={{ maxlength: maxlength }}
+        // inputRef={input => {
+        //   if (ref) {
+        //     ref(input);
+        //   }
+        // }}
       />
       <FieldHelperText error={props.error} helperText={helperText} />
     </div>
   );
 };
 
-export default Input;
+ export default Input;
+

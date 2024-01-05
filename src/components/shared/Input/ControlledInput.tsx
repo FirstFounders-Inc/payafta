@@ -5,17 +5,22 @@ import Input from '.';
 const ControlledInput = <TFieldValue extends FieldValues>(
   props: IControlledInputProps<TFieldValue>,
 ) => {
-  const { name, control, ...rest } = props;
+  const { name, control, onKeyDown, ...rest } = props;
   return (
     <Controller
       control={control}
       name={name}
-      render={({ field: { ...fields }, fieldState }) => (
+      render={({ field, fieldState }) => (
         <Input
           {...rest}
-          {...fields}
+          {...field}
           error={(fieldState.error?.message || '').length > 0}
           helperText={fieldState.error?.message}
+          onKeyDown={onKeyDown}
+          // ref={ref => {
+          //   field.ref(ref);
+           
+          // }}
         />
       )}
     />
