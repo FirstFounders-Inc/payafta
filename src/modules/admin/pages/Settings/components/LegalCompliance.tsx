@@ -1,5 +1,4 @@
-import SettingsReuseableComponent from './shared/SettingsReuseableComponent'
-
+import SettingsReuseableComponent from './shared/SettingsReuseableComponent';
 
 const LegalCompliance = () => {
   return (
@@ -104,6 +103,6 @@ const LegalCompliance = () => {
       </div>
     </SettingsReuseableComponent>
   );
-}
+};
 
-export default LegalCompliance
+export default LegalCompliance;

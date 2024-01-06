@@ -35,14 +35,16 @@ const VirtualCard = () => {
       accessor: 'date',
       label: ' Date',
       render: (date: string) => date,
+      columnClassName: 'hidden lg:table-cell',
     },
     {
       accessor: 'name',
       label: 'Name',
+      columnClassName: 'hidden lg:table-cell',
     },
     {
       accessor: 'type',
-      label: 'Payment Type',
+      label: 'Transaction Type',
       align: 'center',
     },
     {
@@ -53,6 +55,7 @@ const VirtualCard = () => {
     {
       accessor: 'status',
       label: 'Status',
+      columnClassName: 'hidden lg:table-cell',
 
       render: (status: string) => {
         const className = (() => {

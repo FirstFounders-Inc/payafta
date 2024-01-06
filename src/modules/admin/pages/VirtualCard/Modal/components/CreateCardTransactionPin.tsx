@@ -1,8 +1,9 @@
 import Button from '@components/shared/Button';
-import ControlledInput from '@components/shared/Input/ControlledInput';
+
 import BackArrow from '@assets/icons/backArrow.svg?react';
 import { IVirtualCardProps } from '@interfaces/virtualCard.interface';
 import { useForm } from 'react-hook-form';
+import TokenInput from '@components/shared/TokenInput';
 
 const CreateCardTransactionPin = ({
   currentStep,
@@ -26,19 +27,7 @@ const CreateCardTransactionPin = ({
         Protect your payment
       </p>
       <form className="flex flex-col items-center py-4">
-        <div className="flex w-full max-w-[360px] gap-[10px]">
-          {Array.from({ length: 4 }).map((_digit, idx) => (
-            <ControlledInput
-              key={idx}
-              type="text"
-              name={`token.${idx}`}
-              inputMode="numeric"
-              autoComplete="one-time-code"
-              control={control}
-              className="w-full h-[40px] border-[1px] rounded-[5px] text-center font-bold text-[32px] leading-3"
-            />
-          ))}
-        </div>
+        <TokenInput control={control} name="transactionPin" />
         <p className="text-center  text-primary py-8">Forgot Pin?</p>
       </form>
 

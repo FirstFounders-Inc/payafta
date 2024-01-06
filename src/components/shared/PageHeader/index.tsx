@@ -10,7 +10,7 @@ const PageHeader = ({
   card,
 }: IPageHeaderProps) => {
   return (
-    <div className="flex justify-between ">
+    <div className="flex flex-col lg:flex-row gap-4 justify-between ">
       <div>
         <h1
           className={twMerge(

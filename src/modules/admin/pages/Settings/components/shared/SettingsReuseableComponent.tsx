@@ -15,7 +15,7 @@ function SettingsReuseableComponent({
   children,
   className,
   buttonText,
-  button
+  button,
 }: ISettingsProp) {
   return (
     <div className="border-b-[1px] last:border-b-0">

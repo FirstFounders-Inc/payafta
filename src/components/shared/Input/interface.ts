@@ -18,6 +18,8 @@ export type IInputProps = Omit<OutlinedInputProps, 'type'> &
     asteric?: boolean;
     startAdornmentProps?: IInputAdornmentProps;
     endAdornmentProps?: IInputAdornmentProps;
+    maxlength?: number | null;
+    inputRef?: React.ForwardedRef<HTMLInputElement>;
   };
 
 export type IControlledInputProps<TFieldValues extends FieldValues> = Omit<
@@ -27,6 +29,7 @@ export type IControlledInputProps<TFieldValues extends FieldValues> = Omit<
   IBaseControlledField<TFieldValues> & {
     name: string;
     type?: 'text' | 'number' | 'password' | 'email' | 'date';
+    onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   };
 
 export type IDate<TFieldValues extends FieldValues> =

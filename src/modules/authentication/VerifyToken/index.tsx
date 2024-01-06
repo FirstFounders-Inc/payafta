@@ -2,7 +2,7 @@ import SignupImage from '@assets/svg/signup.svg?react';
 
 import AuthLayout from '@components/Layout/AuthLayout';
 import Button from '@components/shared/Button';
-import ControlledInput from '@components/shared/Input/ControlledInput';
+
 import ModalBoxLayout from '@components/shared/ModalBoxLayout';
 import RenderIf from '@components/shared/RenderIf';
 import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
@@ -10,6 +10,8 @@ import { setOpenModal } from 'features/modalPopUp/modalPopSlice';
 import { useForm } from 'react-hook-form';
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import Verify from './components/Verify';
+
+import TokenInput from '@components/shared/TokenInput';
 
 const VerifyToken = () => {
   const { control, handleSubmit } = useForm({
@@ -19,10 +21,6 @@ const VerifyToken = () => {
   });
   const dispatch = useAppDispatch();
   const { modalType, openModal } = useAppSelector(state => state.modal);
-  // const[open, setOpen] = useState(false)
-  // const handleClose = () => {
-  //   setOpen(false)
-  // }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onForm = (data: any) => {
@@ -30,6 +28,7 @@ const VerifyToken = () => {
     const payload = [...data.token];
     console.log(payload.join(''));
   };
+
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full md:items-center md:justify-center">
@@ -45,25 +44,7 @@ const VerifyToken = () => {
               Enter Verification Code{' '}
             </p>
             <form onSubmit={handleSubmit(onForm)}>
-              <div className="flex w-full max-w-[360px] gap-[10px]">
-                {Array.from({ length: 4 }).map((_digit, idx) => (
-                  <ControlledInput
-                    key={idx}
-                    type="text"
-                    name={`token.${idx}`}
-                    inputMode="numeric"
-                    autoComplete="one-time-code"
-                    control={control}
-                    //   pattern="\d{1}"
-
-                    // maxLength={valueLength}
-                    // value={digit}
-
-                    className="w-full h-[40px] border-[1px] rounded-[5px] text-center font-bold text-[32px] leading-3"
-                    //   {...register(`token.${idx}`)}
-                  />
-                ))}
-              </div>
+              <TokenInput control={control} name="token" />
               <p className="text-[12px] leading-4 text-[#4D4D4D] text-center pt-2">
                 Resend code in
               </p>

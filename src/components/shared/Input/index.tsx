@@ -15,6 +15,8 @@ const Input = (props: IInputProps) => {
     className,
     startAdornment,
     endAdornment,
+    maxlength,
+    // inputRef,
     ...rest
   } = props;
   return (
@@ -50,6 +52,12 @@ const Input = (props: IInputProps) => {
             </InputAdornment>
           ) : null
         }
+        inputProps={{ maxlength: maxlength }}
+        // inputRef={input => {
+        //   if (ref) {
+        //     ref(input);
+        //   }
+        // }}
       />
       <FieldHelperText error={props.error} helperText={helperText} />
     </div>

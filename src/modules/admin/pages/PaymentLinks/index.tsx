@@ -13,6 +13,7 @@ export const head: ITableHead[] = [
     accessor: 'date',
     label: ' Date',
     render: (date: string) => date,
+    columnClassName: 'hidden lg:table-cell',
   },
   {
     accessor: 'name',
@@ -22,15 +23,18 @@ export const head: ITableHead[] = [
     accessor: 'type',
     label: 'Type',
     align: 'center',
+    columnClassName: 'hidden lg:table-cell',
   },
   {
     accessor: 'amount',
     label: 'Amount(₦)',
     align: 'center',
+    columnClassName: 'hidden lg:table-cell',
   },
   {
     accessor: 'status',
     label: 'Status',
+    align: 'center',
 
     render: (status: string) => {
       const className = (() => {
@@ -74,12 +78,12 @@ const PaymentLinks = () => {
         card
         className="pt-8"
       />
-      <div className="flex  justify-between items-center pb-4">
-        <div className="w-[45%] grid grid-flow-col gap-2">
+      <div className="flex flex-col lg:flex-row justify-between items-center pb-4">
+        <div className=" w-full lg:w-[45%] grid grid-flow-col gap-2">
           <SearchFilter placeholder="Search" />
         </div>
 
-        <div className="flex gap-4 w-[39%]">
+        <div className="flex  gap-4 w-full lg:w-[39%]">
           <div className="flex flex-grow">
             <ControlledSelect
               name="paymentType"
