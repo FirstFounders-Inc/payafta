@@ -12,11 +12,15 @@ const TokenInput = <TFieldValue extends FieldValues>(
   const onInputChange = (value: string, index: number) => {
     if (value) {
       if (index < 3) {
-        tokenInputRef.current?.children[index + 1]?.querySelector('input')?.focus();
+        tokenInputRef.current?.children[index + 1]
+          ?.querySelector('input')
+          ?.focus();
       }
-    }else{
+    } else {
       if (index > 0) {
-        tokenInputRef.current?.children[index - 1]?.querySelector('input')?.focus();
+        tokenInputRef.current?.children[index - 1]
+          ?.querySelector('input')
+          ?.focus();
       }
     }
   };
@@ -41,7 +45,6 @@ const TokenInput = <TFieldValue extends FieldValues>(
                 field.onChange(e);
                 onInputChange(e.target.value, idx);
               }}
-              
             />
           )}
         />
