@@ -4,9 +4,7 @@ import { twMerge } from 'tailwind-merge';
 import FieldHelperText from '../FieldHelperText';
 import Asteric from '@assets/icons/Label.svg?react';
 
-const Input = (
-  props: IInputProps
-) => {
+const Input = (props: IInputProps) => {
   const {
     label,
 
@@ -66,5 +64,4 @@ const Input = (
   );
 };
 
- export default Input;
-
+export default Input;

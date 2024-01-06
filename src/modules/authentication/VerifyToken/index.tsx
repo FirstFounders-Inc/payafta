@@ -87,7 +87,11 @@ const VerifyToken = () => {
                   />
                 ))}
               </div> */}
-              <TokenInput control={control} name="token" />
+              <TokenInput
+                control={control}
+                name="token"
+               
+              />
               <p className="text-[12px] leading-4 text-[#4D4D4D] text-center pt-2">
                 Resend code in
               </p>

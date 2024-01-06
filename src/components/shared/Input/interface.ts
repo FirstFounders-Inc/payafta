@@ -1,12 +1,7 @@
 import { InputAdornmentProps, OutlinedInputProps } from '@mui/material';
 import { IFieldHelperTextProps } from '../FieldHelperText/interface';
-import {
-  Control,
-  FieldErrorsImpl,
-  FieldValues,
-  Path,
-  
-} from 'react-hook-form';
+import { Control, FieldErrorsImpl, FieldValues, Path } from 'react-hook-form';
+
 
 // import { FieldValues } from 'react-hook-form';
 
@@ -26,10 +21,8 @@ export type IInputProps = Omit<OutlinedInputProps, 'type'> &
     endAdornmentProps?: IInputAdornmentProps;
     maxlength?: number | null;
     inputRef?: React.ForwardedRef<HTMLInputElement>;
-
   };
 
- 
 export type IControlledInputProps<TFieldValues extends FieldValues> = Omit<
   IInputProps,
   'value' | 'name'
@@ -38,6 +31,7 @@ export type IControlledInputProps<TFieldValues extends FieldValues> = Omit<
     name: string;
     type?: 'text' | 'number' | 'password' | 'email' | 'date';
     onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+
   };
 
 export type IDate<TFieldValues extends FieldValues> =
