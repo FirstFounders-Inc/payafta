@@ -32,8 +32,7 @@ const Login = () => {
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full justify-center">
         <div className="hidden lg:flex lg:flex-[80%] w-full h-[100vh] bg-gradient-to-br from-blue-900 to-primary ">
-          {/* <Signin /> */}
-          t
+          {/* <Signin /> */}t
         </div>
         <div className="  flex  flex-col lg:flex-[40%]   px-4 ">
           <AuthLayout

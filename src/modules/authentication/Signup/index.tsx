@@ -44,8 +44,7 @@ const Signup = () => {
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full justify-center">
         <div className="hidden lg:flex lg:flex-[80%]  bg-gradient-to-br from-blue-900 to-primary ">
-          {/* <SignupImage className="w-full object-cover" /> */}
-          t
+          {/* <SignupImage className="w-full object-cover" /> */}t
         </div>
         <div className="  flex  flex-col lg:flex-[40%]   px-4 lg:px-0  h-[100vh]">
           <AuthLayout
