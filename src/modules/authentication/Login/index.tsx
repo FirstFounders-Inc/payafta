@@ -1,4 +1,4 @@
-import Signin from '@assets/svg/signin.svg?react';
+// import Signin from '@assets/svg/signin.svg?react';
 import AuthLayout from '@components/Layout/AuthLayout';
 import ControlledInput from '@components/shared/Input/ControlledInput';
 import { useForm } from 'react-hook-form';
@@ -31,8 +31,8 @@ const Login = () => {
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full justify-center">
-        <div className="hidden lg:flex lg:flex-[60%] w-full h-full">
-          <Signin />
+        <div className="hidden lg:flex lg:flex-[80%] w-full h-[100vh] bg-gradient-to-br from-blue-900 to-primary ">
+          {/* <Signin /> */}t
         </div>
         <div className="  flex  flex-col lg:flex-[40%]   px-4 ">
           <AuthLayout

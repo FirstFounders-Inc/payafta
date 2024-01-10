@@ -1,4 +1,4 @@
-import SignupImage from '@assets/svg/signup.svg?react';
+// import SignupImage from '@assets/svg/signup.svg?react';
 import AuthLayout from '@components/Layout/AuthLayout';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -43,17 +43,17 @@ const Signup = () => {
   return (
     <div className="w-full ">
       <div className="flex flex-col lg:flex-row w-full justify-center">
-        <div className="hidden lg:flex lg:flex-[60%] bg-blue-600">
-          <SignupImage className="w-full object-cover" />
+        <div className="hidden lg:flex lg:flex-[80%]  bg-gradient-to-br from-blue-900 to-primary ">
+          {/* <SignupImage className="w-full object-cover" /> */}t
         </div>
-        <div className="  flex  flex-col lg:flex-[40%]   px-4 lg:px-0 ">
+        <div className="  flex  flex-col lg:flex-[40%]   px-4 lg:px-0  h-[100vh]">
           <AuthLayout
             bigText="Sign up"
             checkbox
             checkboxText="By continuing, you/re agreeing to our customer terms of service, privacy policy and cookie policy"
             className="lg:justify-center lg:items-center"
           >
-            <div className="flex pt-2">
+            <div className="flex pt-2 items-baseline">
               <p className="text-[14px] leading-4">Already registered?</p>
               <Link
                 to="/signin"
