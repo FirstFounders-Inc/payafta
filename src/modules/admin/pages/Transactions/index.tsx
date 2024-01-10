@@ -5,7 +5,6 @@ import PageHeader from '@components/shared/PageHeader';
 import ControlledSelect from '@components/shared/Select/ControlledSelect';
 import { useForm } from 'react-hook-form';
 
-
 const transactionData = [
   {
     date: '12/12/2022',
@@ -93,7 +92,6 @@ const Transactions = () => {
             name="Transaction Type"
             placeholder="Transaction Type"
             options={[{ value: 'all', label: 'All' }]}
-          
           />
         </div>
       </div>
